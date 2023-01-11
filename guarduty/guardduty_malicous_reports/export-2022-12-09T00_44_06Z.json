@@ -1,0 +1,120 @@
+[
+  {
+    "AccountId": "062227712770",
+    "Arn": "arn:aws:guardduty:us-west-2:062227712770:detector/36c264e7d88945e34daf9e4270aa24b2/finding/76c2782efa974df69b922e775386e156",
+    "CreatedAt": "2022-12-08T06:13:20.302Z",
+    "Description": "37.32.10.186 is performing SSH brute force attacks against i-02848527bfa74576b. Brute force attacks are used to gain unauthorized access to your instance by guessing the SSH password.",
+    "Id": "76c2782efa974df69b922e775386e156",
+    "Partition": "aws",
+    "Region": "us-west-2",
+    "Resource": {
+      "InstanceDetails": {
+        "AvailabilityZone": "us-west-2a",
+        "IamInstanceProfile": {
+          "Arn": "arn:aws:iam::062227712770:instance-profile/AmazonSSMRoleForInstancesQuickSetup",
+          "Id": "AIPAQ47IPRMBMWS32SV7Z"
+        },
+        "ImageDescription": "Canonical, Ubuntu, 18.04 LTS, amd64 bionic image build on 2022-09-01",
+        "ImageId": "ami-000340e2c761dddcd",
+        "InstanceId": "i-02848527bfa74576b",
+        "InstanceState": "running",
+        "InstanceType": "t2.large",
+        "OutpostArn": null,
+        "LaunchTime": "2022-11-05T11:13:16.000Z",
+        "NetworkInterfaces": [
+          {
+            "Ipv6Addresses": [],
+            "NetworkInterfaceId": "eni-025ea319b876e9e8f",
+            "PrivateDnsName": "ip-10-16-164-184.us-west-2.compute.internal",
+            "PrivateIpAddress": "10.16.164.184",
+            "PrivateIpAddresses": [
+              {
+                "PrivateDnsName": "ip-10-16-164-184.us-west-2.compute.internal",
+                "PrivateIpAddress": "10.16.164.184"
+              }
+            ],
+            "PublicDnsName": "ec2-35-91-127-105.us-west-2.compute.amazonaws.com",
+            "PublicIp": "35.91.127.105",
+            "SecurityGroups": [
+              {
+                "GroupId": "sg-0eb5376c49a85f8ea",
+                "GroupName": "launch-wizard-11"
+              },
+              {
+                "GroupId": "sg-0ef8efbbee0576ef2",
+                "GroupName": "common"
+              }
+            ],
+            "SubnetId": "subnet-0469c92447c16d532",
+            "VpcId": "vpc-06b6ee161dea311ce"
+          }
+        ],
+        "Platform": null,
+        "ProductCodes": [],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "redash-test-2"
+          }
+        ]
+      },
+      "ResourceType": "Instance"
+    },
+    "SchemaVersion": "2.0",
+    "Service": {
+      "Action": {
+        "ActionType": "NETWORK_CONNECTION",
+        "NetworkConnectionAction": {
+          "Blocked": false,
+          "ConnectionDirection": "INBOUND",
+          "LocalPortDetails": {
+            "Port": 22,
+            "PortName": "SSH"
+          },
+          "Protocol": "TCP",
+          "LocalIpDetails": {
+            "IpAddressV4": "10.16.164.184"
+          },
+          "RemoteIpDetails": {
+            "City": {
+              "CityName": ""
+            },
+            "Country": {
+              "CountryName": "Iran"
+            },
+            "GeoLocation": {
+              "Lat": 35.698,
+              "Lon": 51.4115
+            },
+            "IpAddressV4": "37.32.10.186",
+            "Organization": {
+              "Asn": "202468",
+              "AsnOrg": "Noyan Abr Arvan Co. ( Private Joint Stock)",
+              "Isp": "Noyan Abr Arvan Co. ( Private Joint Stock)",
+              "Org": "Noyan Abr Arvan Co. ( Private Joint Stock)"
+            }
+          },
+          "RemotePortDetails": {
+            "Port": 32810,
+            "PortName": "Unknown"
+          }
+        }
+      },
+      "Archived": false,
+      "Count": 3,
+      "DetectorId": "36c264e7d88945e34daf9e4270aa24b2",
+      "EventFirstSeen": "2022-12-08T06:01:00.000Z",
+      "EventLastSeen": "2022-12-08T12:50:11.000Z",
+      "ResourceRole": "TARGET",
+      "ServiceName": "guardduty",
+      "AdditionalInfo": {
+        "Value": "{}",
+        "Type": "default"
+      }
+    },
+    "Severity": 2,
+    "Title": "37.32.10.186 is performing SSH brute force attacks against i-02848527bfa74576b.",
+    "Type": "UnauthorizedAccess:EC2/SSHBruteForce",
+    "UpdatedAt": "2022-12-08T12:53:26.812Z"
+  }
+]

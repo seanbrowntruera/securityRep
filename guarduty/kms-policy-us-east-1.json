@@ -1,0 +1,30 @@
+{
+    "Id": "key-consolepolicy-3",
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Enable IAM User Permissions",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::062227712770:root"
+            },
+            "Action": "kms:*",
+            "Resource": "*"
+        },
+        {
+            "Sid": "AllowGuardDutyKey",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "guardduty.amazonaws.com"
+            },
+            "Action": "kms:GenerateDataKey",
+            "Resource": "arn:aws:kms:us-east-1:062227712770:key/KMSKeyId",
+            "Condition": {
+                "StringEquals": {
+                    "aws:SourceAccount": "062227712770",
+                    "aws:SourceArn": "arn:aws:guardduty:us-east-1:062227712770:detector/SourceDetectorID"
+                }
+            }
+        }
+    ]
+}

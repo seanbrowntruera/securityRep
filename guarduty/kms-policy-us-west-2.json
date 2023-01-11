@@ -1,0 +1,30 @@
+{
+    "Id": "key-consolepolicy-3",
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Enable IAM User Permissions",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::062227712770:root"
+            },
+            "Action": "kms:*",
+            "Resource": "*"
+        },
+        {
+            "Sid": "Allow GuardDuty to encrypt findings",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "guardduty.amazonaws.com"
+            },
+            "Action": "kms:GenerateDataKey",
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:SourceAccount": "062227712770",
+                    "aws:SourceArn": "arn:aws:guardduty:us-west-2:062227712770:detector/36c264e7d88945e34daf9e4270aa24b2"
+                }
+            }
+        }
+    ]
+}
