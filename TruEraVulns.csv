@@ -1,0 +1,1650 @@
+,,,,,,,,
+Ubuntu os,,,,,,,,
+Package,Package Path,Vuln ID,Severity,Version,Fixed Version,Links,Category,Justification 
+linux-libc-dev,,CVE-2022-43945,HIGH,5.4.0-135.152,,"https://access.redhat.com/security/cve/CVE-2022-43945
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43945
+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=f90497a16e434c2211c66e3de8e77b17868382b8
+",,"The Linux kernel NFSD implementation prior to versions 5.19.17 and 
+6.0.2 are vulnerable to buffer overflow.
+
+Category 2:
+Client is not using particular module"
+,,,,,,,,
+Java jars,,,,,,,,
+Package,Package Path,Vuln ID,Severity,Version,Fixed Version,Links,Category,Justification 
+com.amazon.redshift:redshift-jdbc42,opt/truera/deps/trino-server/plugin/redshift/redshift-jdbc42-2.0.0.5.jar,CVE-2022-41828,HIGH,2.0.0.5,2.1.0.8,"https://github.com/advisories/GHSA-5c6q-f783-h888
+https://github.com/advisories/GHSA-jc69-hjw2-fm86
+https://github.com/aws/amazon-redshift-jdbc-driver/commit/40b143b4698faf90c788ffa89f2d4d8d2ad068b5",,"In Amazon AWS Redshift JDBC Driver (aka amazon-redshift-jdbc-driver or redshift-jdbc42) before 2.1.0.8, the Object Factory does not check the class type when instantiating an object from a class name. This issue has been fixed in version 2.1.0.8.
+
+Category 4:
+Would like to fix but constrained due to very prevalent open source packages (e.g., spark) who have not fixed it"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/data-svc-streaming-runner/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/bin/streaming-ingress-service/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/config.default/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/deps/spark/jars/hadoop-client-runtime-3.3.1.jar",CVE-2020-36518,HIGH,2.10.5.1,"2.12.6.1, 2.13.2.1","https://access.redhat.com/security/cve/CVE-2020-36518
+https://github.com/FasterXML/jackson-databind/commit/fcfc4998ec23f0b1f7f8a9521c2b317b6c25892b
+https://github.com/FasterXML/jackson-databind/issues/2816",,"A flaw was found in the Jackson Databind package. This cause of the issue is due to a Java StackOverflow exception and a denial of service via a significant depth of nested objects.
+
+Truera or it's components do not use rh-sso7-keycloak"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/data-svc-streaming-runner/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/bin/streaming-ingress-service/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/config.default/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/deps/spark/jars/hadoop-client-runtime-3.3.1.jar",CVE-2022-42003,HIGH,2.10.5.1,"2.12.7.1, 2.13.4.1","https://access.redhat.com/security/cve/CVE-2022-42003
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=51020
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42003",,"In FasterXML jackson-databind before 2.14.0-rc1, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled. Additional fix version in 2.13.4.1 and 2.12.17.1
+
+We do not have UNWRAP_SINGLE_VALUE_ARRAYS  enabled"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/data-svc-streaming-runner/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/bin/streaming-ingress-service/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/config.default/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/deps/spark/jars/hadoop-client-runtime-3.3.1.jar",CVE-2022-42004,HIGH,2.10.5.1,"2.12.7.1, 2.13.4","https://access.redhat.com/security/cve/CVE-2022-42004
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=50490
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42004",,"In FasterXML jackson-databind before 2.13.4, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays. An application is vulnerable only with certain customized choices for deserialization.
+
+
+We do not use BeanDeserializer._deserializeFromArray"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/trino-server/plugin/delta-lake/alluxio-shaded-client-2.7.3.jar,CVE-2020-36518,HIGH,2.11.1,"2.12.6.1, 2.13.2.1","https://access.redhat.com/security/cve/CVE-2020-36518
+https://github.com/FasterXML/jackson-databind/commit/fcfc4998ec23f0b1f7f8a9521c2b317b6c25892b
+https://github.com/FasterXML/jackson-databind/issues/2816",,"A flaw was found in the Jackson Databind package. This cause of the issue is due to a Java StackOverflow exception and a denial of service via a significant depth of nested objects.
+
+Truera or it's components do not use rh-sso7-keycloak"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/trino-server/plugin/delta-lake/alluxio-shaded-client-2.7.3.jar,CVE-2022-42003,HIGH,2.11.1,"2.12.7.1, 2.13.4.1","https://access.redhat.com/security/cve/CVE-2022-42003
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=51020
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42003",,"In FasterXML jackson-databind before 2.14.0-rc1, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled. Additional fix version in 2.13.4.1 and 2.12.17.1
+
+We do not have UNWRAP_SINGLE_VALUE_ARRAYS  enabled"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/trino-server/plugin/delta-lake/alluxio-shaded-client-2.7.3.jar,CVE-2022-42004,HIGH,2.11.1,"2.12.7.1, 2.13.4","https://access.redhat.com/security/cve/CVE-2022-42004
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=50490
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42004",,"In FasterXML jackson-databind before 2.13.4, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays. An application is vulnerable only with certain customized choices for deserialization.
+
+
+We do not use BeanDeserializer._deserializeFromArray"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/data-svc-streaming-runner/lib/parquet-jackson-1.12.2.jar
+opt/truera/bin/data-svc/lib/parquet-jackson-1.12.2.jar
+opt/truera/config.default/lib/parquet-jackson-1.12.2.jar
+opt/truera/deps/keycloak/bin/client/jboss-client.jar
+opt/truera/deps/spark/jars/parquet-jackson-1.12.2.jar",CVE-2020-36518,HIGH,2.11.4,"2.12.6.1, 2.13.2.1","https://access.redhat.com/security/cve/CVE-2020-36518
+https://github.com/FasterXML/jackson-databind/commit/fcfc4998ec23f0b1f7f8a9521c2b317b6c25892b
+https://github.com/FasterXML/jackson-databind/issues/2816",,"A flaw was found in the Jackson Databind package. This cause of the issue is due to a Java StackOverflow exception and a denial of service via a significant depth of nested objects.
+
+Truera or it's components do not use rh-sso7-keycloak"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/data-svc-streaming-runner/lib/parquet-jackson-1.12.2.jar
+opt/truera/bin/data-svc/lib/parquet-jackson-1.12.2.jar
+opt/truera/config.default/lib/parquet-jackson-1.12.2.jar
+opt/truera/deps/keycloak/bin/client/jboss-client.jar
+opt/truera/deps/spark/jars/parquet-jackson-1.12.2.jar",CVE-2022-42003,HIGH,2.11.4,"2.12.7.1, 2.13.4.1","https://access.redhat.com/security/cve/CVE-2022-42003
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=51020
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42003",,"In FasterXML jackson-databind before 2.14.0-rc1, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled. Additional fix version in 2.13.4.1 and 2.12.17.1
+
+We do not have UNWRAP_SINGLE_VALUE_ARRAYS  enabled"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/data-svc-streaming-runner/lib/parquet-jackson-1.12.2.jar
+opt/truera/bin/data-svc/lib/parquet-jackson-1.12.2.jar
+opt/truera/config.default/lib/parquet-jackson-1.12.2.jar
+opt/truera/deps/keycloak/bin/client/jboss-client.jar
+opt/truera/deps/spark/jars/parquet-jackson-1.12.2.jar",CVE-2022-42004,HIGH,2.11.4,"2.12.7.1, 2.13.4","https://access.redhat.com/security/cve/CVE-2022-42004
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=50490
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42004",,"In FasterXML jackson-databind before 2.13.4, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays. An application is vulnerable only with certain customized choices for deserialization.
+
+
+We do not use BeanDeserializer._deserializeFromArray"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/deps/apache-hive-3.1.3-bin/lib/hive-druid-handler-3.1.3.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jackson-databind-2.12.0.jar",CVE-2020-36518,HIGH,2.12.0,"2.12.6.1, 2.13.2.1","https://access.redhat.com/security/cve/CVE-2020-36518
+https://github.com/FasterXML/jackson-databind/commit/fcfc4998ec23f0b1f7f8a9521c2b317b6c25892b
+https://github.com/FasterXML/jackson-databind/issues/2816",,"A flaw was found in the Jackson Databind package. This cause of the issue is due to a Java StackOverflow exception and a denial of service via a significant depth of nested objects.
+
+Truera or it's components do not use rh-sso7-keycloak"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/deps/apache-hive-3.1.3-bin/lib/hive-druid-handler-3.1.3.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jackson-databind-2.12.0.jar",CVE-2022-42003,HIGH,2.12.0,"2.12.7.1, 2.13.4.1","https://access.redhat.com/security/cve/CVE-2022-42003
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=51020
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42003",,"In FasterXML jackson-databind before 2.14.0-rc1, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled. Additional fix version in 2.13.4.1 and 2.12.17.1
+
+We do not have UNWRAP_SINGLE_VALUE_ARRAYS  enabled"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/deps/apache-hive-3.1.3-bin/lib/hive-druid-handler-3.1.3.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jackson-databind-2.12.0.jar",CVE-2022-42004,HIGH,2.12.0,"2.12.7.1, 2.13.4","https://access.redhat.com/security/cve/CVE-2022-42004
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=50490
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42004",,"In FasterXML jackson-databind before 2.13.4, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays. An application is vulnerable only with certain customized choices for deserialization.
+
+
+We do not use BeanDeserializer._deserializeFromArray"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/deps/keycloak/bin/client/keycloak-admin-cli-16.1.1.jar
+opt/truera/deps/keycloak/bin/client/keycloak-client-registration-cli-16.1.1.jar",CVE-2020-36518,HIGH,2.12.1,"2.12.6.1, 2.13.2.1","https://access.redhat.com/security/cve/CVE-2020-36518
+https://github.com/FasterXML/jackson-databind/commit/fcfc4998ec23f0b1f7f8a9521c2b317b6c25892b
+https://github.com/FasterXML/jackson-databind/issues/2816",,"A flaw was found in the Jackson Databind package. This cause of the issue is due to a Java StackOverflow exception and a denial of service via a significant depth of nested objects.
+
+Truera or it's components do not use rh-sso7-keycloak"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/deps/keycloak/bin/client/keycloak-admin-cli-16.1.1.jar
+opt/truera/deps/keycloak/bin/client/keycloak-client-registration-cli-16.1.1.jar",CVE-2022-42003,HIGH,2.12.1,"2.12.7.1, 2.13.4.1","https://access.redhat.com/security/cve/CVE-2022-42003
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=51020
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42003",,"In FasterXML jackson-databind before 2.14.0-rc1, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled. Additional fix version in 2.13.4.1 and 2.12.17.1
+
+We do not have UNWRAP_SINGLE_VALUE_ARRAYS  enabled"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/deps/keycloak/bin/client/keycloak-admin-cli-16.1.1.jar
+opt/truera/deps/keycloak/bin/client/keycloak-client-registration-cli-16.1.1.jar",CVE-2022-42004,HIGH,2.12.1,"2.12.7.1, 2.13.4","https://access.redhat.com/security/cve/CVE-2022-42004
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=50490
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42004",,"In FasterXML jackson-databind before 2.13.4, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays. An application is vulnerable only with certain customized choices for deserialization.
+
+
+We do not use BeanDeserializer._deserializeFromArray"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/data-svc-streaming-runner/lib/iceberg-spark-runtime-3.2_2.12-0.14.0.jar
+opt/truera/bin/data-svc/lib/iceberg-spark-runtime-3.2_2.12-0.14.1.jar
+opt/truera/bin/monitoring/lib/iceberg-spark-runtime-3.2_2.12-0.14.1.jar
+opt/truera/config.default/lib/iceberg-spark-runtime-3.2_2.12-0.14.0.jar",CVE-2020-36518,HIGH,2.12.2,"2.12.6.1, 2.13.2.1","https://access.redhat.com/security/cve/CVE-2020-36518
+https://github.com/FasterXML/jackson-databind/commit/fcfc4998ec23f0b1f7f8a9521c2b317b6c25892b
+https://github.com/FasterXML/jackson-databind/issues/2816",,"A flaw was found in the Jackson Databind package. This cause of the issue is due to a Java StackOverflow exception and a denial of service via a significant depth of nested objects.
+
+Truera or it's components do not use rh-sso7-keycloak"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/data-svc-streaming-runner/lib/iceberg-spark-runtime-3.2_2.12-0.14.0.jar
+opt/truera/bin/data-svc/lib/iceberg-spark-runtime-3.2_2.12-0.14.1.jar
+opt/truera/bin/monitoring/lib/iceberg-spark-runtime-3.2_2.12-0.14.1.jar
+opt/truera/config.default/lib/iceberg-spark-runtime-3.2_2.12-0.14.0.jar",CVE-2022-42003,HIGH,2.12.2,"2.12.7.1, 2.13.4.1","https://access.redhat.com/security/cve/CVE-2022-42003
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=51020
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42003",,"In FasterXML jackson-databind before 2.14.0-rc1, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled. Additional fix version in 2.13.4.1 and 2.12.17.1
+
+We do not have UNWRAP_SINGLE_VALUE_ARRAYS  enabled"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/data-svc-streaming-runner/lib/iceberg-spark-runtime-3.2_2.12-0.14.0.jar
+opt/truera/bin/data-svc/lib/iceberg-spark-runtime-3.2_2.12-0.14.1.jar
+opt/truera/bin/monitoring/lib/iceberg-spark-runtime-3.2_2.12-0.14.1.jar
+opt/truera/config.default/lib/iceberg-spark-runtime-3.2_2.12-0.14.0.jar",CVE-2022-42004,HIGH,2.12.2,"2.12.7.1, 2.13.4","https://access.redhat.com/security/cve/CVE-2022-42004
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=50490
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42004",,"In FasterXML jackson-databind before 2.13.4, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays. An application is vulnerable only with certain customized choices for deserialization.
+
+
+We do not use BeanDeserializer._deserializeFromArray"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/data-svc-streaming-runner/lib/jackson-databind-2.12.3.jar
+opt/truera/bin/data-svc/lib/jackson-databind-2.12.3.jar
+opt/truera/config.default/lib/jackson-databind-2.12.3.jar
+opt/truera/deps/keycloak/modules/system/layers/base/com/fasterxml/jackson/core/jackson-databind/main/jackson-databind-2.12.3.jar
+opt/truera/deps/spark/jars/jackson-databind-2.12.3.jar
+opt/truera/deps/spark/yarn/spark-3.2.2-yarn-shuffle.jar",CVE-2020-36518,HIGH,2.12.3,"2.12.6.1, 2.13.2.1","https://access.redhat.com/security/cve/CVE-2020-36518
+https://github.com/FasterXML/jackson-databind/commit/fcfc4998ec23f0b1f7f8a9521c2b317b6c25892b
+https://github.com/FasterXML/jackson-databind/issues/2816",,"A flaw was found in the Jackson Databind package. This cause of the issue is due to a Java StackOverflow exception and a denial of service via a significant depth of nested objects.
+
+Truera or it's components do not use rh-sso7-keycloak"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/data-svc-streaming-runner/lib/jackson-databind-2.12.3.jar
+opt/truera/bin/data-svc/lib/jackson-databind-2.12.3.jar
+opt/truera/config.default/lib/jackson-databind-2.12.3.jar
+opt/truera/deps/keycloak/modules/system/layers/base/com/fasterxml/jackson/core/jackson-databind/main/jackson-databind-2.12.3.jar
+opt/truera/deps/spark/jars/jackson-databind-2.12.3.jar
+opt/truera/deps/spark/yarn/spark-3.2.2-yarn-shuffle.jar",CVE-2022-42003,HIGH,2.12.3,"2.12.7.1, 2.13.4.1","https://access.redhat.com/security/cve/CVE-2022-42003
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=51020
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42003",,"In FasterXML jackson-databind before 2.14.0-rc1, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled. Additional fix version in 2.13.4.1 and 2.12.17.1
+
+We do not have UNWRAP_SINGLE_VALUE_ARRAYS  enabled"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/data-svc-streaming-runner/lib/jackson-databind-2.12.3.jar
+opt/truera/bin/data-svc/lib/jackson-databind-2.12.3.jar
+opt/truera/config.default/lib/jackson-databind-2.12.3.jar
+opt/truera/deps/keycloak/modules/system/layers/base/com/fasterxml/jackson/core/jackson-databind/main/jackson-databind-2.12.3.jar
+opt/truera/deps/spark/jars/jackson-databind-2.12.3.jar
+opt/truera/deps/spark/yarn/spark-3.2.2-yarn-shuffle.jar",CVE-2022-42004,HIGH,2.12.3,"2.12.7.1, 2.13.4","https://access.redhat.com/security/cve/CVE-2022-42004
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=50490
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42004",,"In FasterXML jackson-databind before 2.13.4, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays. An application is vulnerable only with certain customized choices for deserialization.
+
+
+We do not use BeanDeserializer._deserializeFromArray"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/data-svc/lib/aws-java-sdk-bundle-1.12.272.jar
+opt/truera/bin/spark-join-job/spark-join-job.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/aws-java-sdk-bundle-1.12.272.jar
+opt/truera/deps/kafka/libs/jackson-databind-2.12.6.1.jar
+opt/truera/deps/trino-server/lib/aws-java-sdk-bundle-1.12.272.jar",CVE-2022-42003,HIGH,2.12.6.1,"2.12.7.1, 2.13.4.1","https://access.redhat.com/security/cve/CVE-2022-42003
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=51020
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42003",,"In FasterXML jackson-databind before 2.14.0-rc1, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled. Additional fix version in 2.13.4.1 and 2.12.17.1
+
+We do not have UNWRAP_SINGLE_VALUE_ARRAYS  enabled"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/data-svc/lib/aws-java-sdk-bundle-1.12.272.jar
+opt/truera/bin/spark-join-job/spark-join-job.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/aws-java-sdk-bundle-1.12.272.jar
+opt/truera/deps/kafka/libs/jackson-databind-2.12.6.1.jar
+opt/truera/deps/trino-server/lib/aws-java-sdk-bundle-1.12.272.jar",CVE-2022-42004,HIGH,2.12.6.1,"2.12.7.1, 2.13.4","https://access.redhat.com/security/cve/CVE-2022-42004
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=50490
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42004",,"In FasterXML jackson-databind before 2.13.4, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays. An application is vulnerable only with certain customized choices for deserialization.
+
+
+We do not use BeanDeserializer._deserializeFromArray"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/authz-replicator/lib/jackson-databind-2.13.1.jar
+opt/truera/bin/metadata-repo/metarepo.jar
+opt/truera/bin/rbac/rbac.jar
+opt/truera/bin/streaming-ingress-service/lib/jackson-databind-2.13.1.jar
+opt/truera/deps/trino-server/lib/jackson-databind-2.13.1.jar",CVE-2020-36518,HIGH,2.13.1,"2.12.6.1, 2.13.2.1","https://access.redhat.com/security/cve/CVE-2020-36518
+https://github.com/FasterXML/jackson-databind/commit/fcfc4998ec23f0b1f7f8a9521c2b317b6c25892b
+https://github.com/FasterXML/jackson-databind/issues/2816",,"A flaw was found in the Jackson Databind package. This cause of the issue is due to a Java StackOverflow exception and a denial of service via a significant depth of nested objects.
+
+Truera or it's components do not use rh-sso7-keycloak"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/authz-replicator/lib/jackson-databind-2.13.1.jar
+opt/truera/bin/metadata-repo/metarepo.jar
+opt/truera/bin/rbac/rbac.jar
+opt/truera/bin/streaming-ingress-service/lib/jackson-databind-2.13.1.jar
+opt/truera/deps/trino-server/lib/jackson-databind-2.13.1.jar",CVE-2022-42003,HIGH,2.13.1,"2.12.7.1, 2.13.4.1","https://access.redhat.com/security/cve/CVE-2022-42003
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=51020
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42003",,"In FasterXML jackson-databind before 2.14.0-rc1, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled. Additional fix version in 2.13.4.1 and 2.12.17.1
+
+We do not have UNWRAP_SINGLE_VALUE_ARRAYS  enabled"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/authz-replicator/lib/jackson-databind-2.13.1.jar
+opt/truera/bin/metadata-repo/metarepo.jar
+opt/truera/bin/rbac/rbac.jar
+opt/truera/bin/streaming-ingress-service/lib/jackson-databind-2.13.1.jar
+opt/truera/deps/trino-server/lib/jackson-databind-2.13.1.jar",CVE-2022-42004,HIGH,2.13.1,"2.12.7.1, 2.13.4","https://access.redhat.com/security/cve/CVE-2022-42004
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=50490
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42004",,"In FasterXML jackson-databind before 2.13.4, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays. An application is vulnerable only with certain customized choices for deserialization.
+
+
+We do not use BeanDeserializer._deserializeFromArray"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/data-svc/lib/hadoop-client-runtime-3.3.3.jar
+opt/truera/bin/monitoring/lib/hadoop-client-runtime-3.3.3.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/client/hadoop-client-runtime-3.3.3.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/common/lib/jackson-databind-2.13.2.2.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/hdfs/lib/jackson-databind-2.13.2.2.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/hadoop-yarn-applications-catalog-webapp-3.3.3.war",CVE-2022-42003,HIGH,2.13.2.2,"2.12.7.1, 2.13.4.1","https://access.redhat.com/security/cve/CVE-2022-42003
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=51020
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42003",,"In FasterXML jackson-databind before 2.14.0-rc1, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled. Additional fix version in 2.13.4.1 and 2.12.17.1
+
+We do not have UNWRAP_SINGLE_VALUE_ARRAYS  enabled"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/data-svc/lib/hadoop-client-runtime-3.3.3.jar
+opt/truera/bin/monitoring/lib/hadoop-client-runtime-3.3.3.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/client/hadoop-client-runtime-3.3.3.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/common/lib/jackson-databind-2.13.2.2.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/hdfs/lib/jackson-databind-2.13.2.2.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/hadoop-yarn-applications-catalog-webapp-3.3.3.war",CVE-2022-42004,HIGH,2.13.2.2,"2.12.7.1, 2.13.4","https://access.redhat.com/security/cve/CVE-2022-42004
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=50490
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42004",,"In FasterXML jackson-databind before 2.13.4, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays. An application is vulnerable only with certain customized choices for deserialization.
+
+
+We do not use BeanDeserializer._deserializeFromArray"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/bin/query-service/query-service.jar,CVE-2022-42003,HIGH,2.13.4,"2.12.7.1, 2.13.4.1","https://access.redhat.com/security/cve/CVE-2022-42003
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=51020
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42003",,"In FasterXML jackson-databind before 2.14.0-rc1, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled. Additional fix version in 2.13.4.1 and 2.12.17.1
+
+We do not have UNWRAP_SINGLE_VALUE_ARRAYS  enabled"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/data-svc-streaming-runner/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/bin/data-svc-streaming-runner/lib/htrace-core4-4.1.0-incubating.jar
+opt/truera/bin/monitoring/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/bin/streaming-ingress-service/lib/htrace-core4-4.1.0-incubating.jar
+opt/truera/config.default/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/config.default/lib/htrace-core4-4.1.0-incubating.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/timelineservice/lib/htrace-core-3.1.0-incubating.jar
+opt/truera/deps/spark/jars/htrace-core4-4.1.0-incubating.jar
+opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar
+opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar",CVE-2018-5968,HIGH,2.4.0,"2.7.9.5, 2.8.11.1, 2.9.4","https://access.redhat.com/errata/RHSA-2018:0478
+https://access.redhat.com/errata/RHSA-2018:0479
+https://access.redhat.com/errata/RHSA-2018:0480",,"Updated to JBoss Enterprise Application Platform 7.1.1 on RHEL 6
+
+We are currently not using any components"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/data-svc-streaming-runner/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/bin/data-svc-streaming-runner/lib/htrace-core4-4.1.0-incubating.jar
+opt/truera/bin/monitoring/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/bin/streaming-ingress-service/lib/htrace-core4-4.1.0-incubating.jar
+opt/truera/config.default/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/config.default/lib/htrace-core4-4.1.0-incubating.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/timelineservice/lib/htrace-core-3.1.0-incubating.jar
+opt/truera/deps/spark/jars/htrace-core4-4.1.0-incubating.jar
+opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar
+opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar",CVE-2020-10650,HIGH,2.4.0,2.9.10.4,"https://github.com/FasterXML/jackson-databind/commit/a424c038ba0c0d65e579e22001dec925902ac0ef
+https://github.com/FasterXML/jackson-databind/issues/2658
+https://github.com/FasterXML/jackson-databind/pull/2864",,"Jackson 2.11 added MapperFeature.BLOCK_UNSAFE_POLYMORPHIC_BASE_TYPES which can be enabled to prevent use of potentially unsafe 2.10-deprecated legacy methods
+
+We do not use ignite-jta"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/data-svc-streaming-runner/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/bin/data-svc-streaming-runner/lib/htrace-core4-4.1.0-incubating.jar
+opt/truera/bin/monitoring/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/bin/streaming-ingress-service/lib/htrace-core4-4.1.0-incubating.jar
+opt/truera/config.default/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/config.default/lib/htrace-core4-4.1.0-incubating.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/timelineservice/lib/htrace-core-3.1.0-incubating.jar
+opt/truera/deps/spark/jars/htrace-core4-4.1.0-incubating.jar
+opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar
+opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar",CVE-2020-35490,HIGH,2.4.0,2.9.10.8,"https://access.redhat.com/security/cve/CVE-2020-35490
+https://cowtowncoder.medium.com/on-jackson-cves-dont-panic-here-is-what-you-need-to-know-54cd0d6e8062
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35490",,"A flaw was found in jackson-databind. FasterXML mishandles the interaction between serialization gadgets and typing. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.
+
+We do not use org.apache.commons.dbcp2.datasources.PerUserPoolDataSource
+
+"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/data-svc-streaming-runner/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/bin/data-svc-streaming-runner/lib/htrace-core4-4.1.0-incubating.jar
+opt/truera/bin/monitoring/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/bin/streaming-ingress-service/lib/htrace-core4-4.1.0-incubating.jar
+opt/truera/config.default/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/config.default/lib/htrace-core4-4.1.0-incubating.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/timelineservice/lib/htrace-core-3.1.0-incubating.jar
+opt/truera/deps/spark/jars/htrace-core4-4.1.0-incubating.jar
+opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar
+opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar",CVE-2020-35491,HIGH,2.4.0,2.9.10.8,"https://access.redhat.com/security/cve/CVE-2020-35491
+https://cowtowncoder.medium.com/on-jackson-cves-dont-panic-here-is-what-you-need-to-know-54cd0d6e8062
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35491",,"FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to org.apache.commons.dbcp2.datasources.SharedPoolDataSource.
+
+We do not use org.apache.commons.dbcp2.datasources.PerUserPoolDataSource"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/data-svc-streaming-runner/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/bin/data-svc-streaming-runner/lib/htrace-core4-4.1.0-incubating.jar
+opt/truera/bin/monitoring/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/bin/streaming-ingress-service/lib/htrace-core4-4.1.0-incubating.jar
+opt/truera/config.default/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/config.default/lib/htrace-core4-4.1.0-incubating.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/timelineservice/lib/htrace-core-3.1.0-incubating.jar
+opt/truera/deps/spark/jars/htrace-core4-4.1.0-incubating.jar
+opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar
+opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar",CVE-2020-36518,HIGH,2.4.0,"2.12.6.1, 2.13.2.1","https://access.redhat.com/security/cve/CVE-2020-36518
+https://github.com/FasterXML/jackson-databind/commit/fcfc4998ec23f0b1f7f8a9521c2b317b6c25892b
+https://github.com/FasterXML/jackson-databind/issues/2816",,"A flaw was found in the Jackson Databind package. This cause of the issue is due to a Java StackOverflow exception and a denial of service via a significant depth of nested objects.
+
+Truera or it's components do not use rh-sso7-keycloak"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/data-svc-streaming-runner/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/bin/data-svc-streaming-runner/lib/htrace-core4-4.1.0-incubating.jar
+opt/truera/bin/monitoring/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/bin/streaming-ingress-service/lib/htrace-core4-4.1.0-incubating.jar
+opt/truera/config.default/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/config.default/lib/htrace-core4-4.1.0-incubating.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/timelineservice/lib/htrace-core-3.1.0-incubating.jar
+opt/truera/deps/spark/jars/htrace-core4-4.1.0-incubating.jar
+opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar
+opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar",CVE-2022-42003,HIGH,2.4.0,"2.12.7.1, 2.13.4.1","https://access.redhat.com/security/cve/CVE-2022-42003
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=51020
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42003",,"In FasterXML jackson-databind before 2.14.0-rc1, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled. Additional fix version in 2.13.4.1 and 2.12.17.1
+
+We do not have UNWRAP_SINGLE_VALUE_ARRAYS  enabled"
+com.fasterxml.jackson.core:jackson-databind,"opt/truera/bin/data-svc-streaming-runner/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/bin/data-svc-streaming-runner/lib/htrace-core4-4.1.0-incubating.jar
+opt/truera/bin/monitoring/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/bin/streaming-ingress-service/lib/htrace-core4-4.1.0-incubating.jar
+opt/truera/config.default/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/config.default/lib/htrace-core4-4.1.0-incubating.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/htrace-core-3.2.0-incubating.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/timelineservice/lib/htrace-core-3.1.0-incubating.jar
+opt/truera/deps/spark/jars/htrace-core4-4.1.0-incubating.jar
+opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar
+opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar",CVE-2022-42004,HIGH,2.4.0,"2.12.7.1, 2.13.4","https://access.redhat.com/security/cve/CVE-2022-42004
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=50490
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42004",,"In FasterXML jackson-databind before 2.13.4, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays. An application is vulnerable only with certain customized choices for deserialization.
+
+
+We do not use BeanDeserializer._deserializeFromArray"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/hadoop-3.3.3/share/hadoop/tools/lib/aws-java-sdk-bundle-1.11.1026.jar,CVE-2018-5968,HIGH,2.6.7.4,"2.7.9.5, 2.8.11.1, 2.9.4","https://access.redhat.com/errata/RHSA-2018:0478
+https://access.redhat.com/errata/RHSA-2018:0479
+https://access.redhat.com/errata/RHSA-2018:0480",,"JBoss Enterprise Application Platform 7.1.1 on RHEL 6
+
+We are currently not using any components affected in this version"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/hadoop-3.3.3/share/hadoop/tools/lib/aws-java-sdk-bundle-1.11.1026.jar,CVE-2020-10650,HIGH,2.6.7.4,2.9.10.4,"https://github.com/FasterXML/jackson-databind/commit/a424c038ba0c0d65e579e22001dec925902ac0ef
+https://github.com/FasterXML/jackson-databind/issues/2658
+https://github.com/FasterXML/jackson-databind/pull/2864",,"Jackson 2.11 added MapperFeature.BLOCK_UNSAFE_POLYMORPHIC_BASE_TYPES which can be enabled to prevent use of potentially unsafe 2.10-deprecated legacy methods
+
+We do not use ignite-jta"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/hadoop-3.3.3/share/hadoop/tools/lib/aws-java-sdk-bundle-1.11.1026.jar,CVE-2020-35490,HIGH,2.6.7.4,2.9.10.8,"https://access.redhat.com/security/cve/CVE-2020-35490
+https://cowtowncoder.medium.com/on-jackson-cves-dont-panic-here-is-what-you-need-to-know-54cd0d6e8062
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35490",,"A flaw was found in jackson-databind. FasterXML mishandles the interaction between serialization gadgets and typing. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.
+
+We do not use org.apache.commons.dbcp2.datasources.PerUserPoolDataSource
+"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/hadoop-3.3.3/share/hadoop/tools/lib/aws-java-sdk-bundle-1.11.1026.jar,CVE-2020-35491,HIGH,2.6.7.4,2.9.10.8,"https://access.redhat.com/security/cve/CVE-2020-35491
+https://cowtowncoder.medium.com/on-jackson-cves-dont-panic-here-is-what-you-need-to-know-54cd0d6e8062
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35491",,"FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to org.apache.commons.dbcp2.datasources.SharedPoolDataSource.
+
+We do not use org.apache.commons.dbcp2.datasources.PerUserPoolDataSource"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/hadoop-3.3.3/share/hadoop/tools/lib/aws-java-sdk-bundle-1.11.1026.jar,CVE-2020-36518,HIGH,2.6.7.4,"2.12.6.1, 2.13.2.1","https://access.redhat.com/security/cve/CVE-2020-36518
+https://github.com/FasterXML/jackson-databind/commit/fcfc4998ec23f0b1f7f8a9521c2b317b6c25892b
+https://github.com/FasterXML/jackson-databind/issues/2816",,"A flaw was found in the Jackson Databind package. This cause of the issue is due to a Java StackOverflow exception and a denial of service via a significant depth of nested objects.
+
+Truera or it's components do not use rh-sso7-keycloak"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/hadoop-3.3.3/share/hadoop/tools/lib/aws-java-sdk-bundle-1.11.1026.jar,CVE-2022-42003,HIGH,2.6.7.4,"2.12.7.1, 2.13.4.1","https://access.redhat.com/security/cve/CVE-2022-42003
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=51020
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42003",,"In FasterXML jackson-databind before 2.14.0-rc1, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled. Additional fix version in 2.13.4.1 and 2.12.17.1
+
+We do not have UNWRAP_SINGLE_VALUE_ARRAYS  enabled"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/hadoop-3.3.3/share/hadoop/tools/lib/aws-java-sdk-bundle-1.11.1026.jar,CVE-2022-42004,HIGH,2.6.7.4,"2.12.7.1, 2.13.4","https://access.redhat.com/security/cve/CVE-2022-42004
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=50490
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42004",,"In FasterXML jackson-databind before 2.13.4, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays. An application is vulnerable only with certain customized choices for deserialization.
+
+
+We do not use BeanDeserializer._deserializeFromArray"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/trino-server/plugin/delta-lake/calcite-core-1.21.0.151-shaded.jar,CVE-2020-36518,HIGH,2.9.10.8,"2.12.6.1, 2.13.2.1","https://access.redhat.com/security/cve/CVE-2020-36518
+https://github.com/FasterXML/jackson-databind/commit/fcfc4998ec23f0b1f7f8a9521c2b317b6c25892b
+https://github.com/FasterXML/jackson-databind/issues/2816",,"A flaw was found in the Jackson Databind package. This cause of the issue is due to a Java StackOverflow exception and a denial of service via a significant depth of nested objects.
+
+Truera or it's components do not use rh-sso7-keycloak"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/trino-server/plugin/delta-lake/calcite-core-1.21.0.151-shaded.jar,CVE-2022-42003,HIGH,2.9.10.8,"2.12.7.1, 2.13.4.1","https://access.redhat.com/security/cve/CVE-2022-42003
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=51020
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42003",,"In FasterXML jackson-databind before 2.14.0-rc1, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled. Additional fix version in 2.13.4.1 and 2.12.17.1
+
+We do not have UNWRAP_SINGLE_VALUE_ARRAYS  enabled"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/trino-server/plugin/delta-lake/calcite-core-1.21.0.151-shaded.jar,CVE-2022-42004,HIGH,2.9.10.8,"2.12.7.1, 2.13.4","https://access.redhat.com/security/cve/CVE-2022-42004
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=50490
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42004",,"In FasterXML jackson-databind before 2.13.4, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays. An application is vulnerable only with certain customized choices for deserialization.
+
+
+We do not use BeanDeserializer._deserializeFromArray"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2018-12022,HIGH,2.9.4,"2.7.9.4, 2.8.11.2, 2.9.6","http://www.securityfocus.com/bid/107585
+https://access.redhat.com/errata/RHBA-2019:0959
+https://access.redhat.com/errata/RHSA-2019:0782",,"OpenShift Container Platform 3.11 images update
+
+External library that we cannot fix"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2018-12023,HIGH,2.9.4,"2.7.9.4, 2.8.11.2, 2.9.6","http://www.securityfocus.com/bid/105659
+https://access.redhat.com/errata/RHBA-2019:0959
+https://access.redhat.com/errata/RHSA-2019:0782",,"OpenShift Container Platform 3.11 images update
+
+External library that we cannot fix"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2019-12086,HIGH,2.9.4,"2.7.9.6, 2.8.11.4, 2.9.9","http://russiansecurity.expert/2016/04/20/mysql-connect-file-read/
+http://www.securityfocus.com/bid/109227
+https://access.redhat.com/errata/RHSA-2019:2858",,"OpenShift Container Platform 4.1.18 logging-elasticsearch5 security update
+
+External library that we cannot fix"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2019-14439,HIGH,2.9.4,"2.7.9.6, 2.8.11.4, 2.9.9.2","https://access.redhat.com/errata/RHSA-2019:3200
+https://access.redhat.com/security/cve/CVE-2019-14439
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14439",,"A Polymorphic Typing issue was discovered in FasterXML jackson-databind 2.x before 2.9.9.2. This occurs when Default Typing is enabled (either globally or for a specific property) for an externally exposed JSON endpoint and the service has the logback jar in the classpath.
+
+We are not using default typing FasterXML"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-10650,HIGH,2.9.4,2.9.10.4,"https://github.com/FasterXML/jackson-databind/commit/a424c038ba0c0d65e579e22001dec925902ac0ef
+https://github.com/FasterXML/jackson-databind/issues/2658
+https://github.com/FasterXML/jackson-databind/pull/2864",,"Jackson 2.11 added MapperFeature.BLOCK_UNSAFE_POLYMORPHIC_BASE_TYPES which can be enabled to prevent use of potentially unsafe 2.10-deprecated legacy methods
+
+We do not use ignite-jta"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-10672,HIGH,2.9.4,2.9.10.4,"https://access.redhat.com/security/cve/CVE-2020-10672
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-10672
+https://errata.almalinux.org/8/ALSA-2020-1644.html",,"FasterXML jackson-databind 2.x before 2.9.10.4 mishandles the interaction between serialization gadgets and typing, related to org.apache.aries.transaction.jms.internal.XaPooledConnectionFactory (aka aries.transaction.jms).
+
+We are using no gadgets in Jackson databind"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-10673,HIGH,2.9.4,"2.6.7.4, 2.9.10.4","https://access.redhat.com/security/cve/CVE-2020-10673
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-10673
+https://errata.almalinux.org/8/ALSA-2020-1644.html",,"FasterXML jackson-databind 2.x before 2.9.10.4 mishandles the interaction between serialization gadgets and typing, related to com.caucho.config.types.ResourceRef (aka caucho-quercus).
+
+We do not use com.caucho.config.types.ResourceRef"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-10968,HIGH,2.9.4,2.9.10.4,"https://access.redhat.com/security/cve/CVE-2020-10968
+https://github.com/FasterXML/jackson-databind/issues/2662
+https://github.com/advisories/GHSA-rf6r-2c4q-2vwg",,"A flaw was found in jackson-databind 2.x prior to version 2.9.10.4. The interaction between serialization gadgets and typing is mishandled in the bus-proxy. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.
+
+We use Jackson-databind 2.13+ Dependencies that we do not control use 2.9 and prior. However we do not use any gadgets."
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-10969,HIGH,2.9.4,"2.7.9.7, 2.8.11.6, 2.9.10.4","https://access.redhat.com/security/cve/CVE-2020-10969
+https://github.com/FasterXML/jackson-databind/issues/2642
+https://github.com/advisories/GHSA-758m-v56v-grj4",,"A flaw was found in jackson-databind 2.x prior to version 2.9.10.4. The interaction between serialization gadgets and typing is mishandled in the bus-proxy. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.
+
+We use Jackson-databind 2.13+ Dependencies that we do not control use 2.9 and prior. However we do not use any gadgets."
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-11111,HIGH,2.9.4,2.9.10.4,"https://access.redhat.com/security/cve/CVE-2020-11111
+https://github.com/FasterXML/jackson-databind/issues/2664
+https://github.com/advisories/GHSA-v3xw-c963-f5hc",,"A flaw was found in jackson-databind 2.x prior to version 2.9.10.4. The interaction between serialization gadgets and typing is mishandled in the bus-proxy. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.
+
+We use Jackson-databind 2.13+ Dependencies that we do not control use 2.9 and prior. However we do not use any gadgets."
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-11112,HIGH,2.9.4,2.9.10.4,"https://access.redhat.com/security/cve/CVE-2020-11112
+https://github.com/FasterXML/jackson-databind/issues/2666
+https://github.com/advisories/GHSA-58pp-9c76-5625",,"A flaw was found in jackson-databind 2.x prior to version 2.9.10.4. The interaction between serialization gadgets and typing is mishandled in the bus-proxy. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.
+
+We use Jackson-databind 2.13+ Dependencies that we do not control use 2.9 and prior. However we do not use any gadgets."
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-11113,HIGH,2.9.4,2.9.10.4,"https://access.redhat.com/security/cve/CVE-2020-11113
+https://github.com/FasterXML/jackson-databind/issues/2670
+https://github.com/advisories/GHSA-9vvp-fxw6-jcxr",,"A flaw was found in jackson-databind 2.x prior to version 2.9.10.4. The interaction between serialization gadgets and typing is mishandled in the bus-proxy. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.
+
+We use Jackson-databind 2.13+ Dependencies that we do not control use 2.9 and prior. However we do not use any gadgets."
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-11619,HIGH,2.9.4,2.9.10.4,"https://access.redhat.com/security/cve/CVE-2020-11619
+https://github.com/FasterXML/jackson-databind/issues/2680
+https://github.com/advisories/GHSA-27xj-rqx5-2255",,"A flaw was found in jackson-databind 2.x prior to version 2.9.10.4. The interaction between serialization gadgets and typing is mishandled in the bus-proxy. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.
+
+We use Jackson-databind 2.13+ Dependencies that we do not control use 2.9 and prior. However we do not use any gadgets."
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-11620,HIGH,2.9.4,2.9.10.4,"https://access.redhat.com/security/cve/CVE-2020-11620
+https://github.com/FasterXML/jackson-databind/issues/2682
+https://github.com/advisories/GHSA-h4rc-386g-6m85",,"A flaw was found in jackson-databind 2.x prior to version 2.9.10.4. The interaction between serialization gadgets and typing is mishandled in the bus-proxy. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.
+
+We use Jackson-databind 2.13+ Dependencies that we do not control use 2.9 and prior. However we do not use any gadgets."
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-14060,HIGH,2.9.4,2.9.10.5,"https://access.redhat.com/security/cve/CVE-2020-14060
+https://github.com/FasterXML/jackson-databind/commit/d1c67a0396e84c08d0558fbb843b5bd1f26e1921
+https://github.com/FasterXML/jackson-databind/issues/2688",,"A flaw was found in jackson-databind 2.x prior to version 2.9.10.4. The interaction between serialization gadgets and typing is mishandled in the bus-proxy. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.
+
+We use Jackson-databind 2.13+ Dependencies that we do not control use 2.9 and prior. However we do not use any gadgets."
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-14061,HIGH,2.9.4,2.9.10.5,"https://access.redhat.com/security/cve/CVE-2020-14061
+https://github.com/FasterXML/jackson-databind/commit/5c8642aeae9c756b438ab7637c90ef3c77966e6e
+https://github.com/FasterXML/jackson-databind/issues/2698",,"A flaw was found in jackson-databind 2.x prior to version 2.9.10.4. The interaction between serialization gadgets and typing is mishandled in the bus-proxy. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.
+
+We use Jackson-databind 2.13+ Dependencies that we do not control use 2.9 and prior. However we do not use any gadgets."
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-14062,HIGH,2.9.4,2.9.10.5,"https://access.redhat.com/security/cve/CVE-2020-14062
+https://github.com/FasterXML/jackson-databind/commit/99001cdb6807b5c7b170ec6a9092ecbb618ae79c
+https://github.com/FasterXML/jackson-databind/issues/2704",,"A flaw was found in jackson-databind 2.x prior to version 2.9.10.4. The interaction between serialization gadgets and typing is mishandled in the bus-proxy. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.
+
+We use Jackson-databind 2.13+ Dependencies that we do not control use 2.9 and prior. However we do not use any gadgets."
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-14195,HIGH,2.9.4,2.9.10.5,"https://access.redhat.com/security/cve/CVE-2020-14195
+https://github.com/FasterXML/jackson-databind/commit/f6d9c664f6d481703138319f6a0f1fdbddb3a259
+https://github.com/FasterXML/jackson-databind/issues/2765",,"A flaw was found in jackson-databind 2.x prior to version 2.9.10.4. The interaction between serialization gadgets and typing is mishandled in the bus-proxy. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.
+
+We use Jackson-databind 2.13+ Dependencies that we do not control use 2.9 and prior. However we do not use any gadgets."
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-24616,HIGH,2.9.4,2.9.10.6,"https://access.redhat.com/security/cve/CVE-2020-24616
+https://github.com/FasterXML/jackson-databind/issues/2814
+https://github.com/advisories/GHSA-h3cw-g4mq-c5x2",,"A flaw was found in jackson-databind 2.x prior to version 2.9.10.4. The interaction between serialization gadgets and typing is mishandled in the bus-proxy. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.
+
+We use Jackson-databind 2.13+ Dependencies that we do not control use 2.9 and prior. However we do not use any gadgets."
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-24750,HIGH,2.9.4,2.9.10.6,"https://access.redhat.com/security/cve/CVE-2020-24750
+https://github.com/FasterXML/jackson-databind/commit/2118e71325486c68f089a9761c9d8a11b4ddd1cb
+https://github.com/FasterXML/jackson-databind/commit/ad5a630174f08d279504bc51ebba8772fd71b86b",,"A flaw was found in jackson-databind 2.x prior to version 2.9.10.4. The interaction between serialization gadgets and typing is mishandled in the bus-proxy. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.
+
+We use Jackson-databind 2.13+ Dependencies that we do not control use 2.9 and prior. However we do not use any gadgets."
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-25649,HIGH,2.9.4,"2.6.7.4, 2.9.10.7, 2.10.5.1","https://access.redhat.com/security/cve/CVE-2020-25649
+https://bugzilla.redhat.com/show_bug.cgi?id=1887664
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25649",,"A flaw was found in FasterXML Jackson Databind, where it did not have entity expansion secured properly. This flaw allows vulnerability to XML external entity (XXE) attacks. The highest threat from this vulnerability is data integrity.
+
+No Known mitigation for this flaw"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-35490,HIGH,2.9.4,2.9.10.8,"https://access.redhat.com/security/cve/CVE-2020-35490
+https://cowtowncoder.medium.com/on-jackson-cves-dont-panic-here-is-what-you-need-to-know-54cd0d6e8062
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35490",,"A flaw was found in jackson-databind. FasterXML mishandles the interaction between serialization gadgets and typing. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.
+
+We do not use org.apache.commons.dbcp2.datasources.PerUserPoolDataSource
+"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-35491,HIGH,2.9.4,2.9.10.8,"https://access.redhat.com/security/cve/CVE-2020-35491
+https://cowtowncoder.medium.com/on-jackson-cves-dont-panic-here-is-what-you-need-to-know-54cd0d6e8062
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35491",,"FasterXML jackson-databind 2.x before 2.9.10.8 mishandles the interaction between serialization gadgets and typing, related to org.apache.commons.dbcp2.datasources.SharedPoolDataSource.
+
+We do not use org.apache.commons.dbcp2.datasources.PerUserPoolDataSource"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-35728,HIGH,2.9.4,2.9.10.8,"https://access.redhat.com/security/cve/CVE-2020-35728
+https://cowtowncoder.medium.com/on-jackson-cves-dont-panic-here-is-what-you-need-to-know-54cd0d6e8062
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35728",,"A flaw was found in jackson-databind. FasterXML mishandles the interaction between serialization gadgets and typing. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.
+ 
+com.oracle.wls.shaded.org.apache.xalan.lib.sql.JNDIConnectionPool is not found in Class path this does not affect us"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-36179,HIGH,2.9.4,2.9.10.8,"https://access.redhat.com/security/cve/CVE-2020-36179
+https://cowtowncoder.medium.com/on-jackson-cves-dont-panic-here-is-what-you-need-to-know-54cd0d6e8062
+https://github.com/FasterXML/jackson-databind/issues/3004",,"A flaw was found in jackson-databind. FasterXML mishandles the interaction between serialization gadgets and typing. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.
+
+None of the following were found in our classpath:
+oadd.org.apache.commons.dbcp.cpdsadapter.DriverAdapterCPDS, org.apache.commons.dbcp2.cpdsadapter.DriverAdapterCPDS, org.apache.tomcat.dbcp.dbcp.cpdsadapter.DriverAdapterCPDS, org.apache.tomcat.dbcp.dbcp2.cpdsadapter.DriverAdapterCPDS, org.docx4j.org.apache.xalan.lib.sql.JNDIConnectionPool, org.apache.tomcat.dbcp.dbcp2.datasources.PerUserPoolDataSource, org.apache.tomcat.dbcp.dbcp2.datasources.SharedPoolDataSource, org.apache.tomcat.dbcp.dbcp.datasources.PerUserPoolDataSource, org.apache.tomcat.dbcp.dbcp.datasources.SharedPoolDataSource, com.newrelic.agent.deps.ch.qos.logback.core.db.JNDIConnectionSource, com.newrelic.agent.deps.ch.qos.logback.core.db.DriverManagerConnectionSource"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-36180,HIGH,2.9.4,2.9.10.8,"https://access.redhat.com/security/cve/CVE-2020-36180
+https://cowtowncoder.medium.com/on-jackson-cves-dont-panic-here-is-what-you-need-to-know-54cd0d6e8062
+https://github.com/FasterXML/jackson-databind/issues/3004",,"A flaw was found in jackson-databind. FasterXML mishandles the interaction between serialization gadgets and typing. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.
+
+None of the followinf were found in our class path:
+oadd.org.apache.commons.dbcp.cpdsadapter.DriverAdapterCPDS, org.apache.commons.dbcp2.cpdsadapter.DriverAdapterCPDS, org.apache.tomcat.dbcp.dbcp.cpdsadapter.DriverAdapterCPDS, org.apache.tomcat.dbcp.dbcp2.cpdsadapter.DriverAdapterCPDS, org.docx4j.org.apache.xalan.lib.sql.JNDIConnectionPool, org.apache.tomcat.dbcp.dbcp2.datasources.PerUserPoolDataSource, org.apache.tomcat.dbcp.dbcp2.datasources.SharedPoolDataSource, org.apache.tomcat.dbcp.dbcp.datasources.PerUserPoolDataSource, org.apache.tomcat.dbcp.dbcp.datasources.SharedPoolDataSource, com.newrelic.agent.deps.ch.qos.logback.core.db.JNDIConnectionSource, com.newrelic.agent.deps.ch.qos.logback.core.db.DriverManagerConnectionSource"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-36181,HIGH,2.9.4,2.9.10.8,"https://access.redhat.com/security/cve/CVE-2020-36181
+https://cowtowncoder.medium.com/on-jackson-cves-dont-panic-here-is-what-you-need-to-know-54cd0d6e8062
+https://github.com/FasterXML/jackson-databind/issues/3004",,
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-36182,HIGH,2.9.4,2.9.10.8,"https://access.redhat.com/security/cve/CVE-2020-36182
+https://cowtowncoder.medium.com/on-jackson-cves-dont-panic-here-is-what-you-need-to-know-54cd0d6e8062
+https://github.com/FasterXML/jackson-databind/issues/3004",,
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-36183,HIGH,2.9.4,2.9.10.8,"https://access.redhat.com/security/cve/CVE-2020-36183
+https://cowtowncoder.medium.com/on-jackson-cves-dont-panic-here-is-what-you-need-to-know-54cd0d6e8062
+https://github.com/FasterXML/jackson-databind/issues/3003",,
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-36184,HIGH,2.9.4,2.9.10.8,"https://access.redhat.com/security/cve/CVE-2020-36184
+https://cowtowncoder.medium.com/on-jackson-cves-dont-panic-here-is-what-you-need-to-know-54cd0d6e8062
+https://github.com/FasterXML/jackson-databind/issues/2998",,
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-36185,HIGH,2.9.4,2.9.10.8,"https://access.redhat.com/security/cve/CVE-2020-36185
+https://cowtowncoder.medium.com/on-jackson-cves-dont-panic-here-is-what-you-need-to-know-54cd0d6e8062
+https://github.com/FasterXML/jackson-databind/issues/2998",,
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-36186,HIGH,2.9.4,2.9.10.8,"https://access.redhat.com/security/cve/CVE-2020-36186
+https://cowtowncoder.medium.com/on-jackson-cves-dont-panic-here-is-what-you-need-to-know-54cd0d6e8062
+https://github.com/FasterXML/jackson-databind/issues/2997",,
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-36187,HIGH,2.9.4,2.9.10.8,"https://access.redhat.com/security/cve/CVE-2020-36187
+https://cowtowncoder.medium.com/on-jackson-cves-dont-panic-here-is-what-you-need-to-know-54cd0d6e8062
+https://github.com/FasterXML/jackson-databind/issues/2997",,
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-36188,HIGH,2.9.4,2.9.10.8,"https://access.redhat.com/security/cve/CVE-2020-36188
+https://cowtowncoder.medium.com/on-jackson-cves-dont-panic-here-is-what-you-need-to-know-54cd0d6e8062
+https://github.com/FasterXML/jackson-databind/issues/2996",,
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-36189,HIGH,2.9.4,2.9.10.8,"https://access.redhat.com/security/cve/CVE-2020-36189
+https://cowtowncoder.medium.com/on-jackson-cves-dont-panic-here-is-what-you-need-to-know-54cd0d6e8062
+https://github.com/FasterXML/jackson-databind/issues/2996",,
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2020-36518,HIGH,2.9.4,"2.12.6.1, 2.13.2.1","https://access.redhat.com/security/cve/CVE-2020-36518
+https://github.com/FasterXML/jackson-databind/commit/fcfc4998ec23f0b1f7f8a9521c2b317b6c25892b
+https://github.com/FasterXML/jackson-databind/issues/2816",,"A flaw was found in the Jackson Databind package. This cause of the issue is due to a Java StackOverflow exception and a denial of service via a significant depth of nested objects.
+
+Truera or it's components do not use rh-sso7-keycloak"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2021-20190,HIGH,2.9.4,2.9.10.7,"https://access.redhat.com/security/cve/CVE-2021-20190
+https://bugzilla.redhat.com/show_bug.cgi?id=1916633
+https://github.com/FasterXML/jackson-databind/commit/7dbf51bf78d157098074a20bd9da39bd48c18e4a",,
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2022-42003,HIGH,2.9.4,"2.12.7.1, 2.13.4.1","https://access.redhat.com/security/cve/CVE-2022-42003
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=51020
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42003",,"In FasterXML jackson-databind before 2.14.0-rc1, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled. Additional fix version in 2.13.4.1 and 2.12.17.1
+
+We do not have UNWRAP_SINGLE_VALUE_ARRAYS  enabled"
+com.fasterxml.jackson.core:jackson-databind,opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar,CVE-2022-42004,HIGH,2.9.4,"2.12.7.1, 2.13.4","https://access.redhat.com/security/cve/CVE-2022-42004
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=50490
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42004",,"In FasterXML jackson-databind before 2.13.4, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays. An application is vulnerable only with certain customized choices for deserialization.
+
+
+We do not use BeanDeserializer._deserializeFromArray"
+com.fasterxml.woodstox:woodstox-core,"opt/truera/deps/apache-hive-3.1.3-bin/jdbc/hive-jdbc-3.1.3-standalone.jar
+opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar",CVE-2022-40151,HIGH,5.0.3,"5.4.0, 6.4.0","https://access.redhat.com/security/cve/CVE-2022-40151
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=47367
+https://github.com/advisories/GHSA-f8cc-g7j8-xxpm",,"A flaw was found in the XStream package. This flaw allows an attacker to cause a denial of service (DoS) in its target via XML serialization.
+
+We do not use Redhat datagrid 8"
+com.fasterxml.woodstox:woodstox-core,"opt/truera/deps/apache-hive-3.1.3-bin/jdbc/hive-jdbc-3.1.3-standalone.jar
+opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar",CVE-2022-40152,HIGH,5.0.3,"5.4.0, 6.4.0","https://access.redhat.com/security/cve/CVE-2022-40152
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=47434
+https://github.com/FasterXML/woodstox/issues/157",,"A flaw was found in the FasterXML/woodstox package. This flaw allows an attacker to cause a denial of service (DoS) in its target via XML serialization. An attacker may benefit from the parser sending a malicious input that may cause a crash. This vulnerability is only relevant for users making use of the DTD parsing functionality.
+
+We do not use Redhat datagrid 8"
+com.fasterxml.woodstox:woodstox-core,"opt/truera/bin/data-svc-streaming-runner/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/bin/data-svc/lib/hadoop-client-runtime-3.3.3.jar
+opt/truera/bin/monitoring/lib/hadoop-client-runtime-3.3.3.jar
+opt/truera/bin/spark-join-job/spark-join-job.jar
+opt/truera/bin/streaming-ingress-service/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/config.default/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/client/hadoop-client-runtime-3.3.3.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/common/lib/woodstox-core-5.3.0.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/hdfs/lib/woodstox-core-5.3.0.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/hadoop-yarn-applications-catalog-webapp-3.3.3.war
+opt/truera/deps/spark/jars/hadoop-client-runtime-3.3.1.jar",CVE-2022-40151,HIGH,5.3.0,"5.4.0, 6.4.0","https://access.redhat.com/security/cve/CVE-2022-40151
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=47367
+https://github.com/advisories/GHSA-f8cc-g7j8-xxpm",,"A flaw was found in the XStream package. This flaw allows an attacker to cause a denial of service (DoS) in its target via XML serialization.
+
+We do not use Redhat datagrid 8"
+com.fasterxml.woodstox:woodstox-core,"opt/truera/bin/data-svc-streaming-runner/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/bin/data-svc/lib/hadoop-client-runtime-3.3.3.jar
+opt/truera/bin/monitoring/lib/hadoop-client-runtime-3.3.3.jar
+opt/truera/bin/spark-join-job/spark-join-job.jar
+opt/truera/bin/streaming-ingress-service/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/config.default/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/client/hadoop-client-runtime-3.3.3.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/common/lib/woodstox-core-5.3.0.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/hdfs/lib/woodstox-core-5.3.0.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/hadoop-yarn-applications-catalog-webapp-3.3.3.war
+opt/truera/deps/spark/jars/hadoop-client-runtime-3.3.1.jar",CVE-2022-40152,HIGH,5.3.0,"5.4.0, 6.4.0","https://access.redhat.com/security/cve/CVE-2022-40152
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=47434
+https://github.com/FasterXML/woodstox/issues/157",,"A flaw was found in the FasterXML/woodstox package. This flaw allows an attacker to cause a denial of service (DoS) in its target via XML serialization. An attacker may benefit from the parser sending a malicious input that may cause a crash. This vulnerability is only relevant for users making use of the DTD parsing functionality.
+
+We do not use Redhat datagrid 8"
+com.fasterxml.woodstox:woodstox-core,opt/truera/deps/keycloak/modules/system/layers/base/org/codehaus/woodstox/main/woodstox-core-6.0.3.jar,CVE-2022-40151,HIGH,6.0.3,"5.4.0, 6.4.0","https://access.redhat.com/security/cve/CVE-2022-40151
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=47367
+https://github.com/advisories/GHSA-f8cc-g7j8-xxpm",,"A flaw was found in the XStream package. This flaw allows an attacker to cause a denial of service (DoS) in its target via XML serialization.
+
+We do not use Redhat datagrid 8"
+com.fasterxml.woodstox:woodstox-core,opt/truera/deps/keycloak/modules/system/layers/base/org/codehaus/woodstox/main/woodstox-core-6.0.3.jar,CVE-2022-40152,HIGH,6.0.3,"5.4.0, 6.4.0","https://access.redhat.com/security/cve/CVE-2022-40152
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=47434
+https://github.com/FasterXML/woodstox/issues/157",,"A flaw was found in the FasterXML/woodstox package. This flaw allows an attacker to cause a denial of service (DoS) in its target via XML serialization. An attacker may benefit from the parser sending a malicious input that may cause a crash. This vulnerability is only relevant for users making use of the DTD parsing functionality.
+
+We do not use Redhat datagrid 8"
+com.fasterxml.woodstox:woodstox-core,opt/truera/deps/trino-server/plugin/exchange-filesystem/woodstox-core-6.2.7.jar,CVE-2022-40151,HIGH,6.2.7,"5.4.0, 6.4.0","https://access.redhat.com/security/cve/CVE-2022-40151
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=47367
+https://github.com/advisories/GHSA-f8cc-g7j8-xxpm",,"A flaw was found in the XStream package. This flaw allows an attacker to cause a denial of service (DoS) in its target via XML serialization.
+
+We do not use Redhat datagrid 8"
+com.fasterxml.woodstox:woodstox-core,opt/truera/deps/trino-server/plugin/exchange-filesystem/woodstox-core-6.2.7.jar,CVE-2022-40152,HIGH,6.2.7,"5.4.0, 6.4.0","https://access.redhat.com/security/cve/CVE-2022-40152
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=47434
+https://github.com/FasterXML/woodstox/issues/157",,"A flaw was found in the FasterXML/woodstox package. This flaw allows an attacker to cause a denial of service (DoS) in its target via XML serialization. An attacker may benefit from the parser sending a malicious input that may cause a crash. This vulnerability is only relevant for users making use of the DTD parsing functionality.
+
+We do not use Redhat datagrid 8"
+com.google.code.gson:gson,"opt/truera/deps/apache-hive-3.1.3-bin/lib/gson-2.2.4.jar
+opt/truera/deps/spark/jars/gson-2.2.4.jar
+opt/truera/deps/trino-server/plugin/delta-lake/rubix-presto-shaded-0.3.18.jar
+opt/truera/bin/data-svc-streaming-runner/lib/hbase-shaded-miscellaneous-1.0.1.jar
+opt/truera/bin/data-svc/lib/hbase-shaded-miscellaneous-1.0.1.jar
+opt/truera/bin/monitoring/lib/hbase-shaded-miscellaneous-1.0.1.jar
+opt/truera/config.default/lib/hbase-shaded-miscellaneous-1.0.1.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/hbase-shaded-miscellaneous-1.0.1.jar
+opt/truera/deps/trino-server/plugin/delta-lake/gson-2.8.1.jar
+opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar
+opt/truera/deps/spark/yarn/spark-3.2.2-yarn-shuffle.jar
+opt/truera/deps/trino-server/plugin/pinot/gson-2.8.6.jar",CVE-2022-25647,HIGH,2.2.4,2.8.9,"https://access.redhat.com/security/cve/CVE-2022-25647
+https://github.com/advisories/GHSA-4jrv-ppp4-jm57
+https://github.com/google/gson/pull/1991",,"A flaw was found in gson, which is vulnerable to Deserialization of Untrusted Data via the writeReplace() method in internal classes. This issue may lead to availability attacks.
+
+Gson enabled, will fix immediatly"
+com.google.oauth-client:google-oauth-client,"opt/truera/deps/trino-server/plugin/delta-lake/google-oauth-client-1.30.1.jar
+opt/truera/deps/trino-server/plugin/google-sheets/google-oauth-client-1.31.0.jar
+opt/truera/deps/trino-server/plugin/bigquery/google-oauth-client-1.32.1.jar",CVE-2021-22573,HIGH,1.30.1,1.33.3,"https://access.redhat.com/security/cve/CVE-2021-22573
+https://github.com/advisories/GHSA-xh97-72ww-2w58
+https://github.com/googleapis/google-oauth-java-client/pull/872",,"The vulnerability is that IDToken verifier does not verify if token is properly signed. Signature verification makes sure that the token's payload comes from valid provider, not from someone else. An attacker can provide a compromised token with custom payload. The token will pass the validation on the client side. We recommend upgrading to version 1.33.3 or above
+
+We do not use IDToken"
+com.google.protobuf:protobuf-java,"opt/truera/bin/data-svc-streaming-runner/lib/iceberg-spark-runtime-3.2_2.12-0.14.0.jar
+opt/truera/bin/data-svc/lib/iceberg-spark-runtime-3.2_2.12-0.14.1.jar
+opt/truera/bin/monitoring/lib/iceberg-spark-runtime-3.2_2.12-0.14.1.jar
+opt/truera/config.default/lib/iceberg-spark-runtime-3.2_2.12-0.14.0.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/hive-exec-3.1.3.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/protobuf-java-2.5.0.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/common/lib/protobuf-java-2.5.0.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/hadoop-yarn-applications-catalog-webapp-3.3.3.war
+opt/truera/deps/spark/jars/protobuf-java-2.5.0.jar
+opt/truera/deps/trino-server/plugin/iceberg/orc-core-1.7.2-nohive.jar
+opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar",CVE-2022-3171,HIGH,2.5.0,"3.16.3, 3.19.6, 3.20.3, 3.21.7","https://access.redhat.com/security/cve/CVE-2022-3171
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=48771
+https://github.com/advisories/GHSA-h4h5-3hr4-j3g2",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,"opt/truera/bin/data-svc-streaming-runner/lib/iceberg-spark-runtime-3.2_2.12-0.14.0.jar
+opt/truera/bin/data-svc/lib/iceberg-spark-runtime-3.2_2.12-0.14.1.jar
+opt/truera/bin/monitoring/lib/iceberg-spark-runtime-3.2_2.12-0.14.1.jar
+opt/truera/config.default/lib/iceberg-spark-runtime-3.2_2.12-0.14.0.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/hive-exec-3.1.3.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/protobuf-java-2.5.0.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/common/lib/protobuf-java-2.5.0.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/hadoop-yarn-applications-catalog-webapp-3.3.3.war
+opt/truera/deps/spark/jars/protobuf-java-2.5.0.jar
+opt/truera/deps/trino-server/plugin/iceberg/orc-core-1.7.2-nohive.jar
+opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar",CVE-2022-3509,HIGH,2.5.0,"3.21.7, 3.20.3, 3.19.6, 3.16.3","https://github.com/advisories/GHSA-g5ww-5jh7-63cx
+https://github.com/protocolbuffers/protobuf/commit/a3888f53317a8018e7a439bac4abeb8f3425d5e9
+https://nvd.nist.gov/vuln/detail/CVE-2022-3509",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,"opt/truera/bin/data-svc-streaming-runner/lib/iceberg-spark-runtime-3.2_2.12-0.14.0.jar
+opt/truera/bin/data-svc/lib/iceberg-spark-runtime-3.2_2.12-0.14.1.jar
+opt/truera/bin/monitoring/lib/iceberg-spark-runtime-3.2_2.12-0.14.1.jar
+opt/truera/config.default/lib/iceberg-spark-runtime-3.2_2.12-0.14.0.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/hive-exec-3.1.3.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/protobuf-java-2.5.0.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/common/lib/protobuf-java-2.5.0.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/hadoop-yarn-applications-catalog-webapp-3.3.3.war
+opt/truera/deps/spark/jars/protobuf-java-2.5.0.jar
+opt/truera/deps/trino-server/plugin/iceberg/orc-core-1.7.2-nohive.jar
+opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar",CVE-2022-3510,HIGH,2.5.0,"3.21.7, 3.20.3, 3.19.6, 3.16.3","https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3510
+https://github.com/advisories/GHSA-4gg5-vx3j-xwc7
+https://github.com/protocolbuffers/protobuf/commit/db7c17803320525722f45c1d26fc08bc41d1bf48",,
+com.google.protobuf:protobuf-java,opt/truera/deps/trino-server/plugin/mysql/protobuf-java-3.11.4.jar,CVE-2022-3171,HIGH,3.11.4,"3.16.3, 3.19.6, 3.20.3, 3.21.7","https://access.redhat.com/security/cve/CVE-2022-3171
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=48771
+https://github.com/advisories/GHSA-h4h5-3hr4-j3g2",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,opt/truera/deps/trino-server/plugin/mysql/protobuf-java-3.11.4.jar,CVE-2022-3509,HIGH,3.11.4,"3.21.7, 3.20.3, 3.19.6, 3.16.3","https://github.com/advisories/GHSA-g5ww-5jh7-63cx
+https://github.com/protocolbuffers/protobuf/commit/a3888f53317a8018e7a439bac4abeb8f3425d5e9
+https://nvd.nist.gov/vuln/detail/CVE-2022-3509",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,opt/truera/deps/trino-server/plugin/mysql/protobuf-java-3.11.4.jar,CVE-2022-3510,HIGH,3.11.4,"3.21.7, 3.20.3, 3.19.6, 3.16.3","https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3510
+https://github.com/advisories/GHSA-4gg5-vx3j-xwc7
+https://github.com/protocolbuffers/protobuf/commit/db7c17803320525722f45c1d26fc08bc41d1bf48",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,opt/truera/deps/trino-server/plugin/kudu/kudu-client-1.15.0.jar,CVE-2022-3171,HIGH,3.15.6,"3.16.3, 3.19.6, 3.20.3, 3.21.7","https://access.redhat.com/security/cve/CVE-2022-3171
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=48771
+https://github.com/advisories/GHSA-h4h5-3hr4-j3g2",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,opt/truera/deps/trino-server/plugin/kudu/kudu-client-1.15.0.jar,CVE-2022-3509,HIGH,3.15.6,"3.21.7, 3.20.3, 3.19.6, 3.16.3","https://github.com/advisories/GHSA-g5ww-5jh7-63cx
+https://github.com/protocolbuffers/protobuf/commit/a3888f53317a8018e7a439bac4abeb8f3425d5e9
+https://nvd.nist.gov/vuln/detail/CVE-2022-3509",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,opt/truera/deps/trino-server/plugin/kudu/kudu-client-1.15.0.jar,CVE-2022-3510,HIGH,3.15.6,"3.21.7, 3.20.3, 3.19.6, 3.16.3","https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3510
+https://github.com/advisories/GHSA-4gg5-vx3j-xwc7
+https://github.com/protocolbuffers/protobuf/commit/db7c17803320525722f45c1d26fc08bc41d1bf48",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,opt/truera/deps/trino-server/plugin/pinot/protobuf-java-3.17.2.jar,CVE-2022-3171,HIGH,3.17.2,"3.16.3, 3.19.6, 3.20.3, 3.21.7","https://access.redhat.com/security/cve/CVE-2022-3171
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=48771
+https://github.com/advisories/GHSA-h4h5-3hr4-j3g2",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,opt/truera/deps/trino-server/plugin/pinot/protobuf-java-3.17.2.jar,CVE-2022-3509,HIGH,3.17.2,"3.21.7, 3.20.3, 3.19.6, 3.16.3","https://github.com/advisories/GHSA-g5ww-5jh7-63cx
+https://github.com/protocolbuffers/protobuf/commit/a3888f53317a8018e7a439bac4abeb8f3425d5e9
+https://nvd.nist.gov/vuln/detail/CVE-2022-3509",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,opt/truera/deps/trino-server/plugin/pinot/protobuf-java-3.17.2.jar,CVE-2022-3510,HIGH,3.17.2,"3.21.7, 3.20.3, 3.19.6, 3.16.3","https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3510
+https://github.com/advisories/GHSA-4gg5-vx3j-xwc7
+https://github.com/protocolbuffers/protobuf/commit/db7c17803320525722f45c1d26fc08bc41d1bf48",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,"opt/truera/deps/keycloak/modules/system/layers/base/com/google/protobuf/main/protobuf-java-3.19.2.jar
+opt/truera/deps/trino-server/plugin/bigquery/protobuf-java-3.19.2.jar
+opt/truera/deps/trino-server/plugin/delta-lake/alluxio-shaded-client-2.7.3.jar",CVE-2022-3171,HIGH,3.19.2,"3.16.3, 3.19.6, 3.20.3, 3.21.7","https://access.redhat.com/security/cve/CVE-2022-3171
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=48771
+https://github.com/advisories/GHSA-h4h5-3hr4-j3g2",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,"opt/truera/deps/keycloak/modules/system/layers/base/com/google/protobuf/main/protobuf-java-3.19.2.jar
+opt/truera/deps/trino-server/plugin/bigquery/protobuf-java-3.19.2.jar
+opt/truera/deps/trino-server/plugin/delta-lake/alluxio-shaded-client-2.7.3.jar",CVE-2022-3509,HIGH,3.19.2,"3.21.7, 3.20.3, 3.19.6, 3.16.3","https://github.com/advisories/GHSA-g5ww-5jh7-63cx
+https://github.com/protocolbuffers/protobuf/commit/a3888f53317a8018e7a439bac4abeb8f3425d5e9
+https://nvd.nist.gov/vuln/detail/CVE-2022-3509",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,"opt/truera/deps/keycloak/modules/system/layers/base/com/google/protobuf/main/protobuf-java-3.19.2.jar
+opt/truera/deps/trino-server/plugin/bigquery/protobuf-java-3.19.2.jar
+opt/truera/deps/trino-server/plugin/delta-lake/alluxio-shaded-client-2.7.3.jar",CVE-2022-3510,HIGH,3.19.2,"3.21.7, 3.20.3, 3.19.6, 3.16.3","https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3510
+https://github.com/advisories/GHSA-4gg5-vx3j-xwc7
+https://github.com/protocolbuffers/protobuf/commit/db7c17803320525722f45c1d26fc08bc41d1bf48",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,"opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar
+opt/truera/deps/spark/jars/mesos-1.4.0-shaded-protobuf.jar",CVE-2022-3171,HIGH,3.3.0,"3.16.3, 3.19.6, 3.20.3, 3.21.7","https://access.redhat.com/security/cve/CVE-2022-3171
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=48771
+https://github.com/advisories/GHSA-h4h5-3hr4-j3g2",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,"opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar
+opt/truera/deps/spark/jars/mesos-1.4.0-shaded-protobuf.jar",CVE-2022-3509,HIGH,3.3.0,"3.21.7, 3.20.3, 3.19.6, 3.16.3","https://github.com/advisories/GHSA-g5ww-5jh7-63cx
+https://github.com/protocolbuffers/protobuf/commit/a3888f53317a8018e7a439bac4abeb8f3425d5e9
+https://nvd.nist.gov/vuln/detail/CVE-2022-3509",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,"opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar
+opt/truera/deps/spark/jars/mesos-1.4.0-shaded-protobuf.jar",CVE-2022-3510,HIGH,3.3.0,"3.21.7, 3.20.3, 3.19.6, 3.16.3","https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3510
+https://github.com/advisories/GHSA-4gg5-vx3j-xwc7
+https://github.com/protocolbuffers/protobuf/commit/db7c17803320525722f45c1d26fc08bc41d1bf48",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,"opt/truera/bin/data-svc-streaming-runner/lib/hbase-shaded-protobuf-1.0.1.jar
+opt/truera/bin/data-svc/lib/hbase-shaded-protobuf-1.0.1.jar
+opt/truera/bin/monitoring/lib/hbase-shaded-protobuf-1.0.1.jar
+opt/truera/config.default/lib/hbase-shaded-protobuf-1.0.1.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/hbase-shaded-protobuf-1.0.1.jar",CVE-2022-3171,HIGH,3.3.1,"3.16.3, 3.19.6, 3.20.3, 3.21.7","https://access.redhat.com/security/cve/CVE-2022-3171
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=48771
+https://github.com/advisories/GHSA-h4h5-3hr4-j3g2",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,"opt/truera/bin/data-svc-streaming-runner/lib/hbase-shaded-protobuf-1.0.1.jar
+opt/truera/bin/data-svc/lib/hbase-shaded-protobuf-1.0.1.jar
+opt/truera/bin/monitoring/lib/hbase-shaded-protobuf-1.0.1.jar
+opt/truera/config.default/lib/hbase-shaded-protobuf-1.0.1.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/hbase-shaded-protobuf-1.0.1.jar",CVE-2022-3509,HIGH,3.3.1,"3.21.7, 3.20.3, 3.19.6, 3.16.3","https://github.com/advisories/GHSA-g5ww-5jh7-63cx
+https://github.com/protocolbuffers/protobuf/commit/a3888f53317a8018e7a439bac4abeb8f3425d5e9
+https://nvd.nist.gov/vuln/detail/CVE-2022-3509",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,"opt/truera/bin/data-svc-streaming-runner/lib/hbase-shaded-protobuf-1.0.1.jar
+opt/truera/bin/data-svc/lib/hbase-shaded-protobuf-1.0.1.jar
+opt/truera/bin/monitoring/lib/hbase-shaded-protobuf-1.0.1.jar
+opt/truera/config.default/lib/hbase-shaded-protobuf-1.0.1.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/hbase-shaded-protobuf-1.0.1.jar",CVE-2022-3510,HIGH,3.3.1,"3.21.7, 3.20.3, 3.19.6, 3.16.3","https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3510
+https://github.com/advisories/GHSA-4gg5-vx3j-xwc7
+https://github.com/protocolbuffers/protobuf/commit/db7c17803320525722f45c1d26fc08bc41d1bf48",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,"opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/csi/lib/protobuf-java-3.6.1.jar
+opt/truera/deps/trino-server/plugin/delta-lake/calcite-core-1.21.0.151-shaded.jar
+opt/truera/deps/trino-server/plugin/druid/protobuf-java-3.6.1.jar",CVE-2022-3171,HIGH,3.6.1,"3.16.3, 3.19.6, 3.20.3, 3.21.7","https://access.redhat.com/security/cve/CVE-2022-3171
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=48771
+https://github.com/advisories/GHSA-h4h5-3hr4-j3g2",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,"opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/csi/lib/protobuf-java-3.6.1.jar
+opt/truera/deps/trino-server/plugin/delta-lake/calcite-core-1.21.0.151-shaded.jar
+opt/truera/deps/trino-server/plugin/druid/protobuf-java-3.6.1.jar",CVE-2022-3509,HIGH,3.6.1,"3.21.7, 3.20.3, 3.19.6, 3.16.3","https://github.com/advisories/GHSA-g5ww-5jh7-63cx
+https://github.com/protocolbuffers/protobuf/commit/a3888f53317a8018e7a439bac4abeb8f3425d5e9
+https://nvd.nist.gov/vuln/detail/CVE-2022-3509",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,"opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/csi/lib/protobuf-java-3.6.1.jar
+opt/truera/deps/trino-server/plugin/delta-lake/calcite-core-1.21.0.151-shaded.jar
+opt/truera/deps/trino-server/plugin/druid/protobuf-java-3.6.1.jar",CVE-2022-3510,HIGH,3.6.1,"3.21.7, 3.20.3, 3.19.6, 3.16.3","https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3510
+https://github.com/advisories/GHSA-4gg5-vx3j-xwc7
+https://github.com/protocolbuffers/protobuf/commit/db7c17803320525722f45c1d26fc08bc41d1bf48",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,"opt/truera/bin/data-svc-streaming-runner/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/bin/data-svc/lib/hadoop-client-runtime-3.3.3.jar
+opt/truera/bin/monitoring/lib/hadoop-client-runtime-3.3.3.jar
+opt/truera/bin/streaming-ingress-service/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/config.default/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/client/hadoop-client-runtime-3.3.3.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/common/lib/hadoop-shaded-protobuf_3_7-1.1.1.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/hdfs/lib/hadoop-shaded-protobuf_3_7-1.1.1.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/hadoop-yarn-applications-catalog-webapp-3.3.3.war
+opt/truera/deps/spark/jars/hadoop-client-runtime-3.3.1.jar
+opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar",CVE-2022-3171,HIGH,3.7.1,"3.16.3, 3.19.6, 3.20.3, 3.21.7","https://access.redhat.com/security/cve/CVE-2022-3171
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=48771
+https://github.com/advisories/GHSA-h4h5-3hr4-j3g2",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6 in our java package we have RBAC"
+com.google.protobuf:protobuf-java,"opt/truera/bin/data-svc-streaming-runner/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/bin/data-svc/lib/hadoop-client-runtime-3.3.3.jar
+opt/truera/bin/monitoring/lib/hadoop-client-runtime-3.3.3.jar
+opt/truera/bin/streaming-ingress-service/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/config.default/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/client/hadoop-client-runtime-3.3.3.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/common/lib/hadoop-shaded-protobuf_3_7-1.1.1.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/hdfs/lib/hadoop-shaded-protobuf_3_7-1.1.1.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/hadoop-yarn-applications-catalog-webapp-3.3.3.war
+opt/truera/deps/spark/jars/hadoop-client-runtime-3.3.1.jar
+opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar",CVE-2022-3509,HIGH,3.7.1,"3.21.7, 3.20.3, 3.19.6, 3.16.3","https://github.com/advisories/GHSA-g5ww-5jh7-63cx
+https://github.com/protocolbuffers/protobuf/commit/a3888f53317a8018e7a439bac4abeb8f3425d5e9
+https://nvd.nist.gov/vuln/detail/CVE-2022-3509",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.google.protobuf:protobuf-java,"opt/truera/bin/data-svc-streaming-runner/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/bin/data-svc/lib/hadoop-client-runtime-3.3.3.jar
+opt/truera/bin/monitoring/lib/hadoop-client-runtime-3.3.3.jar
+opt/truera/bin/streaming-ingress-service/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/config.default/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/client/hadoop-client-runtime-3.3.3.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/common/lib/hadoop-shaded-protobuf_3_7-1.1.1.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/hdfs/lib/hadoop-shaded-protobuf_3_7-1.1.1.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/hadoop-yarn-applications-catalog-webapp-3.3.3.war
+opt/truera/deps/spark/jars/hadoop-client-runtime-3.3.1.jar
+opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar",CVE-2022-3510,HIGH,3.7.1,"3.21.7, 3.20.3, 3.19.6, 3.16.3","https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3510
+https://github.com/advisories/GHSA-4gg5-vx3j-xwc7
+https://github.com/protocolbuffers/protobuf/commit/db7c17803320525722f45c1d26fc08bc41d1bf48",,"A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.
+
+Will upgrade to 319.6"
+com.h2database:h2,"opt/truera/deps/keycloak/modules/system/layers/base/com/h2database/h2/main/h2-1.4.197.jar
+opt/truera/deps/trino-server/plugin/raptor-legacy/h2-1.4.200.jar",CVE-2022-45868,HIGH,1.4.197,,"https://github.com/advisories/GHSA-22wj-vf5f-wrvj
+https://github.com/h2database/h2database/blob/96832bf5a97cdc0adc1f2066ed61c54990d66ab5/h2/src/main/org/h2/server/web/WebServer.java#L346-L347
+https://nvd.nist.gov/vuln/detail/CVE-2022-45868",,"The web-based admin console in H2 Database Engine through 2.1.214 can be started via the CLI with the argument -webAdminPassword, which allows the user to specify the password in cleartext for the web admin console. Consequently, a local user (or an attacker that has obtained local access through some means) would be able to discover the password by listing processes and their arguments. NOTE: the vendor states ""This is not a vulnerability of H2 Console ... Passwords should never be passed on the command line and every qualified DBA or system administrator is expected to know that.""
+
+We don't pass  the H2 DB password through the commandline"
+commons-beanutils:commons-beanutils,opt/truera/deps/trino-server/plugin/accumulo/commons-beanutils-1.7.0.jar,CVE-2014-0114,HIGH,1.7.0,1.9.2,"http://advisories.mageia.org/MGASA-2014-0219.html
+http://apache-ignite-developers.2346864.n4.nabble.com/CVE-2014-0114-Apache-Ignite-is-vulnerable-to-existing-CVE-2014-0114-td31205.html
+http://commons.apache.org/proper/commons-beanutils/javadocs/v1.9.2/RELEASE-NOTES.txt",,"It was found that the Struts 1 ActionForm object allowed access to the
+'class' parameter, which is directly mapped to the getClass() method. A
+remote attacker could use this flaw to manipulate the ClassLoader used by
+an application server running Struts 1. This could lead to remote code
+execution under certain conditions (CVE-2014-0114).
+
+We do not use Struts struts-1.3.10-4.1.mga4 or struts-1.3.10-4.1.mga3"
+commons-beanutils:commons-beanutils,"opt/truera/deps/trino-server/plugin/accumulo/commons-beanutils-1.7.0.jar
+opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar",CVE-2019-10086,HIGH,1.7.0,1.9.4,"http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00007.html
+http://mail-archives.apache.org/mod_mbox/www-announce/201908.mbox/%3cC628798F-315D-4428-8CB1-4ED1ECC958E4@apache.org%3e
+https://access.redhat.com/errata/RHSA-2019:4317",,"A flaw was found in the Apache Commons BeanUtils, where the class property in PropertyUtilsBean is not suppressed by default. This flaw allows an attacker to access the classloader.
+
+No Fix available however we do not implement BeanUtils"
+io.netty:netty-codec,opt/truera/deps/apache-hive-3.1.3-bin/lib/hive-druid-handler-3.1.3.jar,CVE-2021-37136,HIGH,4.0.52.Final,4.1.68.Final,"https://access.redhat.com/security/cve/CVE-2021-37136
+https://github.com/advisories/GHSA-grg4-wf29-r9vv
+https://github.com/netty/netty/blob/4.1/codec/src/main/java/io/netty/handler/codec/compression/Bzip2Decoder.java#L294",,"The Bzip2 decompression decoder function doesn't allow setting size restrictions on the decompressed output data (which affects the allocation size used during decompression). All users of Bzip2Decoder are affected. The malicious input can trigger an OOME and so a DoS attack
+
+In OpenShift Container Platform (OCP), the Hive/Presto/Hadoop components that comprise the OCP Metering stack, ship the vulnerable version of netty-codec package. Since the release of OCP 4.6, the Metering product has been deprecated [1], hence the affected components are marked as wontfix. This may be fixed in the future."
+io.netty:netty-codec,opt/truera/deps/apache-hive-3.1.3-bin/lib/hive-druid-handler-3.1.3.jar,CVE-2021-37137,HIGH,4.0.52.Final,4.1.68.Final,"https://access.redhat.com/security/cve/CVE-2021-37137
+https://github.com/advisories/GHSA-9vjp-v76f-g363
+https://github.com/netty/netty/blob/4.1/codec/src/main/java/io/netty/handler/codec/compression/SnappyFrameDecoder.java#L171",,"The Snappy frame decoder function doesn't restrict the chunk length which may lead to excessive memory usage. Beside this it also may buffer reserved skippable chunks until the whole chunk was received which may lead to excessive memory usage as well. This vulnerability can be triggered by supplying malicious input that decompresses to a very big size (via a network stream or a file) or by sending a huge skippable chunk.
+
+In OpenShift Container Platform (OCP), the Hive/Presto/Hadoop components that comprise the OCP Metering stack, ship the vulnerable version of netty-codec package. Since the release of OCP 4.6, the Metering product has been deprecated [1], hence the affected components are marked as wontfix. This may be fixed in the future."
+io.netty:netty-codec,opt/truera/deps/trino-server/plugin/accumulo/netty-codec-4.1.48.Final.jar,CVE-2021-37136,HIGH,4.1.48.Final,4.1.68.Final,"https://access.redhat.com/security/cve/CVE-2021-37136
+https://github.com/advisories/GHSA-grg4-wf29-r9vv
+https://github.com/netty/netty/blob/4.1/codec/src/main/java/io/netty/handler/codec/compression/Bzip2Decoder.java#L294",,"The Bzip2 decompression decoder function doesn't allow setting size restrictions on the decompressed output data (which affects the allocation size used during decompression). All users of Bzip2Decoder are affected. The malicious input can trigger an OOME and so a DoS attack
+
+In OpenShift Container Platform (OCP), the Hive/Presto/Hadoop components that comprise the OCP Metering stack, ship the vulnerable version of netty-codec package. Since the release of OCP 4.6, the Metering product has been deprecated [1], hence the affected components are marked as wontfix. This may be fixed in the future."
+io.netty:netty-codec,opt/truera/deps/trino-server/plugin/accumulo/netty-codec-4.1.48.Final.jar,CVE-2021-37137,HIGH,4.1.48.Final,4.1.68.Final,"https://access.redhat.com/security/cve/CVE-2021-37137
+https://github.com/advisories/GHSA-9vjp-v76f-g363
+https://github.com/netty/netty/blob/4.1/codec/src/main/java/io/netty/handler/codec/compression/SnappyFrameDecoder.java#L171",,"The Snappy frame decoder function doesn't restrict the chunk length which may lead to excessive memory usage. Beside this it also may buffer reserved skippable chunks until the whole chunk was received which may lead to excessive memory usage as well. This vulnerability can be triggered by supplying malicious input that decompresses to a very big size (via a network stream or a file) or by sending a huge skippable chunk.
+
+In OpenShift Container Platform (OCP), the Hive/Presto/Hadoop components that comprise the OCP Metering stack, ship the vulnerable version of netty-codec package. Since the release of OCP 4.6, the Metering product has been deprecated [1], hence the affected components are marked as wontfix. This may be fixed in the future."
+io.netty:netty-codec,opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/hadoop-yarn-applications-catalog-webapp-3.3.3.war,CVE-2021-37136,HIGH,4.1.50.Final,4.1.68.Final,"https://access.redhat.com/security/cve/CVE-2021-37136
+https://github.com/advisories/GHSA-grg4-wf29-r9vv
+https://github.com/netty/netty/blob/4.1/codec/src/main/java/io/netty/handler/codec/compression/Bzip2Decoder.java#L294",,"The Bzip2 decompression decoder function doesn't allow setting size restrictions on the decompressed output data (which affects the allocation size used during decompression). All users of Bzip2Decoder are affected. The malicious input can trigger an OOME and so a DoS attack
+
+In OpenShift Container Platform (OCP), the Hive/Presto/Hadoop components that comprise the OCP Metering stack, ship the vulnerable version of netty-codec package. Since the release of OCP 4.6, the Metering product has been deprecated [1], hence the affected components are marked as wontfix. This may be fixed in the future."
+io.netty:netty-codec,opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/hadoop-yarn-applications-catalog-webapp-3.3.3.war,CVE-2021-37137,HIGH,4.1.50.Final,4.1.68.Final,"https://access.redhat.com/security/cve/CVE-2021-37137
+https://github.com/advisories/GHSA-9vjp-v76f-g363
+https://github.com/netty/netty/blob/4.1/codec/src/main/java/io/netty/handler/codec/compression/SnappyFrameDecoder.java#L171",,"The Snappy frame decoder function doesn't restrict the chunk length which may lead to excessive memory usage. Beside this it also may buffer reserved skippable chunks until the whole chunk was received which may lead to excessive memory usage as well. This vulnerability can be triggered by supplying malicious input that decompresses to a very big size (via a network stream or a file) or by sending a huge skippable chunk.
+
+In OpenShift Container Platform (OCP), the Hive/Presto/Hadoop components that comprise the OCP Metering stack, ship the vulnerable version of netty-codec package. Since the release of OCP 4.6, the Metering product has been deprecated [1], hence the affected components are marked as wontfix. This may be fixed in the future."
+io.netty:netty-codec,opt/truera/deps/trino-server/plugin/cassandra/netty-codec-4.1.60.Final.jar,CVE-2021-37136,HIGH,4.1.60.Final,4.1.68.Final,"https://access.redhat.com/security/cve/CVE-2021-37136
+https://github.com/advisories/GHSA-grg4-wf29-r9vv
+https://github.com/netty/netty/blob/4.1/codec/src/main/java/io/netty/handler/codec/compression/Bzip2Decoder.java#L294",,"The Bzip2 decompression decoder function doesn't allow setting size restrictions on the decompressed output data (which affects the allocation size used during decompression). All users of Bzip2Decoder are affected. The malicious input can trigger an OOME and so a DoS attack
+
+In OpenShift Container Platform (OCP), the Hive/Presto/Hadoop components that comprise the OCP Metering stack, ship the vulnerable version of netty-codec package. Since the release of OCP 4.6, the Metering product has been deprecated [1], hence the affected components are marked as wontfix. This may be fixed in the future."
+io.netty:netty-codec,opt/truera/deps/trino-server/plugin/cassandra/netty-codec-4.1.60.Final.jar,CVE-2021-37137,HIGH,4.1.60.Final,4.1.68.Final,"https://access.redhat.com/security/cve/CVE-2021-37137
+https://github.com/advisories/GHSA-9vjp-v76f-g363
+https://github.com/netty/netty/blob/4.1/codec/src/main/java/io/netty/handler/codec/compression/SnappyFrameDecoder.java#L171",,"The Snappy frame decoder function doesn't restrict the chunk length which may lead to excessive memory usage. Beside this it also may buffer reserved skippable chunks until the whole chunk was received which may lead to excessive memory usage as well. This vulnerability can be triggered by supplying malicious input that decompresses to a very big size (via a network stream or a file) or by sending a huge skippable chunk.
+
+In OpenShift Container Platform (OCP), the Hive/Presto/Hadoop components that comprise the OCP Metering stack, ship the vulnerable version of netty-codec package. Since the release of OCP 4.6, the Metering product has been deprecated [1], hence the affected components are marked as wontfix. This may be fixed in the future."
+io.netty:netty-codec,opt/truera/deps/hadoop-3.3.3/share/hadoop/tools/lib/aws-java-sdk-bundle-1.11.1026.jar,CVE-2021-37136,HIGH,4.1.61.Final,4.1.68.Final,"https://access.redhat.com/security/cve/CVE-2021-37136
+https://github.com/advisories/GHSA-grg4-wf29-r9vv
+https://github.com/netty/netty/blob/4.1/codec/src/main/java/io/netty/handler/codec/compression/Bzip2Decoder.java#L294",,"The Bzip2 decompression decoder function doesn't allow setting size restrictions on the decompressed output data (which affects the allocation size used during decompression). All users of Bzip2Decoder are affected. The malicious input can trigger an OOME and so a DoS attack
+
+In OpenShift Container Platform (OCP), the Hive/Presto/Hadoop components that comprise the OCP Metering stack, ship the vulnerable version of netty-codec package. Since the release of OCP 4.6, the Metering product has been deprecated [1], hence the affected components are marked as wontfix. This may be fixed in the future."
+io.netty:netty-codec,opt/truera/deps/hadoop-3.3.3/share/hadoop/tools/lib/aws-java-sdk-bundle-1.11.1026.jar,CVE-2021-37137,HIGH,4.1.61.Final,4.1.68.Final,"https://access.redhat.com/security/cve/CVE-2021-37137
+https://github.com/advisories/GHSA-9vjp-v76f-g363
+https://github.com/netty/netty/blob/4.1/codec/src/main/java/io/netty/handler/codec/compression/SnappyFrameDecoder.java#L171",,"The Snappy frame decoder function doesn't restrict the chunk length which may lead to excessive memory usage. Beside this it also may buffer reserved skippable chunks until the whole chunk was received which may lead to excessive memory usage as well. This vulnerability can be triggered by supplying malicious input that decompresses to a very big size (via a network stream or a file) or by sending a huge skippable chunk.
+
+In OpenShift Container Platform (OCP), the Hive/Presto/Hadoop components that comprise the OCP Metering stack, ship the vulnerable version of netty-codec package. Since the release of OCP 4.6, the Metering product has been deprecated [1], hence the affected components are marked as wontfix. This may be fixed in the future."
+io.netty:netty-codec-http,opt/truera/deps/apache-hive-3.1.3-bin/lib/hive-druid-handler-3.1.3.jar,CVE-2019-16869,HIGH,4.0.52.Final,4.1.42.Final,"https://access.redhat.com/errata/RHSA-2019:3892
+https://access.redhat.com/errata/RHSA-2019:3901
+https://access.redhat.com/errata/RHSA-2020:0159",,"Red Hat Fuse 7.5.0 security update
+
+Will upgrade immediatly"
+io.undertow:undertow-core,"opt/truera/deps/keycloak/bin/client/jboss-client.jar
+opt/truera/deps/keycloak/modules/system/layers/base/io/undertow/core/main/undertow-core-2.2.14.Final.jar",CVE-2021-3859,HIGH,2.2.14.Final,2.2.15,"https://access.redhat.com/security/cve/CVE-2021-3859
+https://access.redhat.com/security/cve/cve-2021-3859
+https://bugzilla.redhat.com/show_bug.cgi?id=2010378",,"Red Hat Fuse 7.5.0 security update
+
+Will upgrade immediatly"
+io.undertow:undertow-core,"opt/truera/deps/keycloak/bin/client/jboss-client.jar
+opt/truera/deps/keycloak/modules/system/layers/base/io/undertow/core/main/undertow-core-2.2.14.Final.jar",CVE-2022-1259,HIGH,2.2.14.Final,,"https://access.redhat.com/security/cve/CVE-2022-1259
+https://bugzilla.redhat.com/show_bug.cgi?id=2072339
+https://nvd.nist.gov/vuln/detail/CVE-2022-1259",,
+io.undertow:undertow-core,"opt/truera/deps/keycloak/bin/client/jboss-client.jar
+opt/truera/deps/keycloak/modules/system/layers/base/io/undertow/core/main/undertow-core-2.2.14.Final.jar",CVE-2022-1319,HIGH,2.2.14.Final,2.2.17,"https://access.redhat.com/security/cve/CVE-2022-1319
+https://bugzilla.redhat.com/show_bug.cgi?id=2073890
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1319",,
+io.undertow:undertow-core,"opt/truera/deps/keycloak/bin/client/jboss-client.jar
+opt/truera/deps/keycloak/modules/system/layers/base/io/undertow/core/main/undertow-core-2.2.14.Final.jar",CVE-2022-2053,HIGH,2.2.14.Final,2.2.19,"https://access.redhat.com/security/cve/CVE-2022-2053
+https://bugzilla.redhat.com/show_bug.cgi?id=2095862&comment#0
+https://github.com/advisories/GHSA-95rf-557x-44g5",,
+log4j:log4j,"opt/truera/bin/data-svc-streaming-runner/lib/log4j-1.2.17.jar
+opt/truera/bin/monitoring/lib/log4j-1.2.17.jar
+opt/truera/bin/spark-join-job/spark-join-job.jar
+opt/truera/config.default/lib/log4j-1.2.17.jar
+opt/truera/deps/spark/jars/log4j-1.2.17.jar
+opt/truera/deps/trino-server/plugin/accumulo/log4j-1.2.17.jar
+opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar
+opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar",CVE-2022-23302,HIGH,1.2.17,,"http://www.openwall.com/lists/oss-security/2022/01/18/3
+https://access.redhat.com/security/cve/CVE-2022-23302
+https://github.com/advisories/GHSA-w9p3-5cr8-m3jj",,"Description
+JMSSink in all versions of Log4j 1.x is vulnerable to deserialization of untrusted data when the attacker has write access to the Log4j configuration or if the configuration references an LDAP service the attacker has access to. The attacker can provide a TopicConnectionFactoryBindingName configuration causing JMSSink to perform JNDI requests that result in remote code execution in a similar fashion to CVE-2021-4104. Note this issue only affects Log4j 1.x when specifically configured to use JMSSink, which is not the default. Apache Log4j 1.2 reached end of life in August 2015. Users should upgrade to Log4j 2 as it addresses numerous other issues from the previous versions.
+
+This vulnerability is category 3"
+log4j:log4j,"opt/truera/bin/data-svc-streaming-runner/lib/log4j-1.2.17.jar
+opt/truera/bin/monitoring/lib/log4j-1.2.17.jar
+opt/truera/bin/spark-join-job/spark-join-job.jar
+opt/truera/config.default/lib/log4j-1.2.17.jar
+opt/truera/deps/spark/jars/log4j-1.2.17.jar
+opt/truera/deps/trino-server/plugin/accumulo/log4j-1.2.17.jar
+opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar
+opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar",CVE-2022-23307,HIGH,1.2.17,,"https://access.redhat.com/security/cve/CVE-2022-23307
+https://github.com/advisories/GHSA-f7vh-qwp3-x37m
+https://linux.oracle.com/cve/CVE-2022-23307.html",,
+net.minidev:json-smart,"opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar
+opt/truera/deps/apache-hive-3.1.3-bin/jdbc/hive-jdbc-3.1.3-standalone.jar",CVE-2021-31684,HIGH,2.2.1,"1.3.1, 2.4.1","https://access.redhat.com/security/cve/CVE-2021-31684
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-31684
+https://github.com/advisories/GHSA-fg2v-w576-w4v3",,
+org.apache.accumulo:accumulo-core,"opt/truera/deps/apache-hive-3.1.3-bin/lib/accumulo-core-1.7.3.jar
+opt/truera/deps/trino-server/plugin/accumulo/accumulo-core-1.7.4.jar",CVE-2020-17533,HIGH,1.7.3,"1.10.1, 2.0.1","http://www.openwall.com/lists/oss-security/2020/12/29/1
+https://github.com/advisories/GHSA-grc3-8q8m-4j7c
+https://github.com/apache/accumulo/commit/877ad502f6857e48342664e4b0ce83db74e4cda4",,
+org.apache.activemq:artemis-commons,"opt/truera/deps/keycloak/bin/client/jboss-client.jar
+opt/truera/deps/keycloak/modules/system/layers/base/org/apache/activemq/artemis/journal/main/artemis-commons-2.19.0.jar",CVE-2022-23913,HIGH,2.19.0,2.19.1,"https://access.redhat.com/security/cve/CVE-2022-23913
+https://github.com/advisories/GHSA-pr38-qpxm-g88x
+https://github.com/apache/activemq-artemis/pull/3862",,
+org.apache.calcite.avatica:avatica-core,"opt/truera/deps/apache-hive-3.1.3-bin/lib/avatica-1.11.0.jar
+opt/truera/deps/trino-server/plugin/delta-lake/calcite-core-1.21.0.151-shaded.jar
+opt/truera/deps/trino-server/plugin/druid/avatica-core-1.17.0.jar
+opt/truera/deps/trino-server/plugin/pinot/avatica-core-1.20.0.jar",CVE-2022-36364,HIGH,1.11.0,1.22.0,"http://www.openwall.com/lists/oss-security/2022/07/28/1
+https://github.com/advisories/GHSA-w7f5-jrpr-5c2m
+https://github.com/apache/calcite-avatica/commit/0c097b6a685fc1f97f151505a219976f15ed0c4c",,
+org.apache.commons:commons-compress,opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar,CVE-2019-12402,HIGH,1.18,1.19,"https://access.redhat.com/security/cve/CVE-2019-12402
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12402
+https://github.com/advisories/GHSA-53x6-4x5p-rrvv",,
+org.apache.commons:commons-compress,opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar,CVE-2021-35515,HIGH,1.18,1.21,"http://www.openwall.com/lists/oss-security/2021/07/13/1
+https://access.redhat.com/security/cve/CVE-2021-35515
+https://commons.apache.org/proper/commons-compress/security-reports.html",,
+org.apache.commons:commons-compress,opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar,CVE-2021-35516,HIGH,1.18,1.21,"http://www.openwall.com/lists/oss-security/2021/07/13/2
+https://access.redhat.com/security/cve/CVE-2021-35516
+https://commons.apache.org/proper/commons-compress/security-reports.html",,
+org.apache.commons:commons-compress,opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar,CVE-2021-35517,HIGH,1.18,1.21,"http://www.openwall.com/lists/oss-security/2021/07/13/3
+http://www.openwall.com/lists/oss-security/2021/07/13/5
+https://access.redhat.com/security/cve/CVE-2021-35517",,
+org.apache.commons:commons-compress,opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar,CVE-2021-36090,HIGH,1.18,1.21,"http://www.openwall.com/lists/oss-security/2021/07/13/4
+http://www.openwall.com/lists/oss-security/2021/07/13/6
+https://access.redhat.com/security/cve/CVE-2021-36090",,
+org.apache.commons:commons-compress,"opt/truera/bin/data-svc-streaming-runner/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/bin/monitoring/lib/commons-compress-1.19.jar
+opt/truera/bin/spark-join-job/spark-join-job.jar
+opt/truera/bin/streaming-ingress-service/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/config.default/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/commons-compress-1.19.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/hive-druid-handler-3.1.3.jar
+opt/truera/deps/spark/jars/hadoop-client-runtime-3.3.1.jar",CVE-2021-35515,HIGH,1.19,1.21,"http://www.openwall.com/lists/oss-security/2021/07/13/1
+https://access.redhat.com/security/cve/CVE-2021-35515
+https://commons.apache.org/proper/commons-compress/security-reports.html",,
+org.apache.commons:commons-compress,"opt/truera/bin/data-svc-streaming-runner/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/bin/monitoring/lib/commons-compress-1.19.jar
+opt/truera/bin/spark-join-job/spark-join-job.jar
+opt/truera/bin/streaming-ingress-service/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/config.default/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/commons-compress-1.19.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/hive-druid-handler-3.1.3.jar
+opt/truera/deps/spark/jars/hadoop-client-runtime-3.3.1.jar",CVE-2021-35516,HIGH,1.19,1.21,"http://www.openwall.com/lists/oss-security/2021/07/13/2
+https://access.redhat.com/security/cve/CVE-2021-35516
+https://commons.apache.org/proper/commons-compress/security-reports.html",,
+org.apache.commons:commons-compress,"opt/truera/bin/data-svc-streaming-runner/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/bin/monitoring/lib/commons-compress-1.19.jar
+opt/truera/bin/spark-join-job/spark-join-job.jar
+opt/truera/bin/streaming-ingress-service/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/config.default/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/commons-compress-1.19.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/hive-druid-handler-3.1.3.jar
+opt/truera/deps/spark/jars/hadoop-client-runtime-3.3.1.jar",CVE-2021-35517,HIGH,1.19,1.21,"http://www.openwall.com/lists/oss-security/2021/07/13/3
+http://www.openwall.com/lists/oss-security/2021/07/13/5
+https://access.redhat.com/security/cve/CVE-2021-35517",,
+org.apache.commons:commons-compress,"opt/truera/bin/data-svc-streaming-runner/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/bin/monitoring/lib/commons-compress-1.19.jar
+opt/truera/bin/spark-join-job/spark-join-job.jar
+opt/truera/bin/streaming-ingress-service/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/config.default/lib/hadoop-client-runtime-3.3.1.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/commons-compress-1.19.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/hive-druid-handler-3.1.3.jar
+opt/truera/deps/spark/jars/hadoop-client-runtime-3.3.1.jar",CVE-2021-36090,HIGH,1.19,1.21,"http://www.openwall.com/lists/oss-security/2021/07/13/4
+http://www.openwall.com/lists/oss-security/2021/07/13/6
+https://access.redhat.com/security/cve/CVE-2021-36090",,
+org.apache.commons:commons-compress,"opt/truera/bin/data-svc-streaming-runner/lib/commons-compress-1.20.jar
+opt/truera/config.default/lib/commons-compress-1.20.jar",CVE-2021-35515,HIGH,1.2,1.21,"http://www.openwall.com/lists/oss-security/2021/07/13/1
+https://access.redhat.com/security/cve/CVE-2021-35515
+https://commons.apache.org/proper/commons-compress/security-reports.html",,
+org.apache.commons:commons-compress,"opt/truera/bin/data-svc-streaming-runner/lib/commons-compress-1.20.jar
+opt/truera/config.default/lib/commons-compress-1.20.jar",CVE-2021-35516,HIGH,1.2,1.21,"http://www.openwall.com/lists/oss-security/2021/07/13/2
+https://access.redhat.com/security/cve/CVE-2021-35516
+https://commons.apache.org/proper/commons-compress/security-reports.html",,
+org.apache.commons:commons-compress,"opt/truera/bin/data-svc-streaming-runner/lib/commons-compress-1.20.jar
+opt/truera/config.default/lib/commons-compress-1.20.jar",CVE-2021-35517,HIGH,1.2,1.21,"http://www.openwall.com/lists/oss-security/2021/07/13/3
+http://www.openwall.com/lists/oss-security/2021/07/13/5
+https://access.redhat.com/security/cve/CVE-2021-35517",,
+org.apache.commons:commons-compress,"opt/truera/bin/data-svc-streaming-runner/lib/commons-compress-1.20.jar
+opt/truera/config.default/lib/commons-compress-1.20.jar",CVE-2021-36090,HIGH,1.2,1.21,"http://www.openwall.com/lists/oss-security/2021/07/13/4
+http://www.openwall.com/lists/oss-security/2021/07/13/6
+https://access.redhat.com/security/cve/CVE-2021-36090",,
+org.apache.commons:commons-compress,opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar,CVE-2021-35517,HIGH,1.4.1,1.21,"http://www.openwall.com/lists/oss-security/2021/07/13/3
+http://www.openwall.com/lists/oss-security/2021/07/13/5
+https://access.redhat.com/security/cve/CVE-2021-35517",,
+org.apache.commons:commons-compress,opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar,CVE-2021-36090,HIGH,1.4.1,1.21,"http://www.openwall.com/lists/oss-security/2021/07/13/4
+http://www.openwall.com/lists/oss-security/2021/07/13/6
+https://access.redhat.com/security/cve/CVE-2021-36090",,
+org.apache.hadoop:hadoop-common,opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar,CVE-2018-8009,HIGH,2.7.5,"2.7.7, 2.8.5, 2.9.2, 3.1.1","http://www.securityfocus.com/bid/105927
+https://access.redhat.com/errata/RHSA-2019:3892
+https://access.redhat.com/security/cve/CVE-2018-8009",,
+org.apache.hadoop:hadoop-common,opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar,CVE-2018-8029,HIGH,2.7.5,"2.8.5, 2.9.2, 3.1.1","http://www.securityfocus.com/bid/108518
+https://access.redhat.com/security/cve/CVE-2018-8029
+https://github.com/advisories/GHSA-37pw-qw47-4jxm",,
+org.apache.hadoop:hadoop-common,opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar,CVE-2020-9492,HIGH,2.7.5,"2.10.1, 2.10.1, 3.2.2, 3.2.2","https://access.redhat.com/security/cve/CVE-2020-9492
+https://github.com/advisories/GHSA-f8vc-wfc8-hxqh
+https://github.com/apache/hadoop/commit/ca65409836d2949e9a9408d40bec0177b414cd5d",,
+org.apache.hadoop:hadoop-common,opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar,CVE-2020-9492,HIGH,3.1.3,"2.10.1, 2.10.1, 3.2.2, 3.2.2","https://access.redhat.com/security/cve/CVE-2020-9492
+https://github.com/advisories/GHSA-f8vc-wfc8-hxqh
+https://github.com/apache/hadoop/commit/ca65409836d2949e9a9408d40bec0177b414cd5d",,
+org.apache.hadoop:hadoop-hdfs,opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar,CVE-2020-9492,HIGH,2.7.5,"2.10.1, 3.1.4, 3.2.2","https://access.redhat.com/security/cve/CVE-2020-9492
+https://github.com/advisories/GHSA-f8vc-wfc8-hxqh
+https://github.com/apache/hadoop/commit/ca65409836d2949e9a9408d40bec0177b414cd5d",,
+org.apache.hadoop:hadoop-hdfs,opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar,CVE-2020-9492,HIGH,3.1.3,"2.10.1, 3.1.4, 3.2.2","https://access.redhat.com/security/cve/CVE-2020-9492
+https://github.com/advisories/GHSA-f8vc-wfc8-hxqh
+https://github.com/apache/hadoop/commit/ca65409836d2949e9a9408d40bec0177b414cd5d",,
+org.apache.hadoop:hadoop-yarn-server-common,"opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar
+opt/truera/bin/spark-join-job/spark-join-job.jar",CVE-2021-33036,HIGH,2.7.5,"2.10.2, 3.2.3, 3.3.2","http://www.openwall.com/lists/oss-security/2022/06/15/2
+https://access.redhat.com/security/cve/CVE-2021-33036
+https://github.com/advisories/GHSA-58jx-f5rf-qgqf",,
+org.apache.hadoop:hadoop-yarn-server-nodemanager,"opt/truera/deps/hadoop-3.3.3/share/hadoop/client/hadoop-client-minicluster-3.3.3.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/hadoop-yarn-server-nodemanager-3.3.3.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/sources/hadoop-yarn-server-nodemanager-3.3.3-sources.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/sources/hadoop-yarn-server-nodemanager-3.3.3-test-sources.jar",CVE-2021-25642,HIGH,3.3.3,"2.10.2, 3.2.4, 3.3.4","https://access.redhat.com/security/cve/CVE-2021-25642
+https://github.com/advisories/GHSA-rr2m-gffv-mgrj
+https://github.com/apache/hadoop/commit/5e2f4339fadc88f20543915fc9b0aaeaf4f9e7bf",,
+org.apache.hive:hive-jdbc,opt/truera/deps/spark/jars/hive-jdbc-2.3.9.jar,CVE-2021-34538,HIGH,2.3.9,3.1.3,"https://github.com/advisories/GHSA-v3p8-j597-3xg8
+https://lists.apache.org/thread/oqqgnhz4c6nxsfd0xstosnk0g15f7354
+https://nvd.nist.gov/vuln/detail/CVE-2021-34538",,
+org.apache.ivy:ivy,"opt/truera/deps/apache-hive-3.1.3-bin/lib/ivy-2.4.0.jar
+opt/truera/deps/trino-server/plugin/delta-lake/ivy-2.4.0.jar
+opt/truera/bin/data-svc-streaming-runner/lib/ivy-2.5.0.jar
+opt/truera/bin/data-svc/lib/ivy-2.5.0.jar
+opt/truera/bin/monitoring/lib/ivy-2.5.0.jar
+opt/truera/config.default/lib/ivy-2.5.0.jar
+opt/truera/deps/spark/jars/ivy-2.5.0.jar",CVE-2022-37866,HIGH,2.4.0,2.5.1,"https://access.redhat.com/security/cve/CVE-2022-37866
+https://github.com/advisories/GHSA-wv7w-rj2x-556x
+https://lists.apache.org/thread/htxbr8oc464hxrgroftnz3my70whk93b",,
+org.apache.mesos:mesos,opt/truera/deps/spark/jars/mesos-1.4.0-shaded-protobuf.jar,CVE-2018-11793,HIGH,1.4.0,"1.5.2, 1.6.2, 1.7.1, 1.8.1","http://www.securityfocus.com/bid/107281
+https://access.redhat.com/security/cve/CVE-2018-11793
+https://github.com/advisories/GHSA-p2xq-vcm7-xjj6",,
+org.apache.mesos:mesos,opt/truera/deps/spark/jars/mesos-1.4.0-shaded-protobuf.jar,CVE-2018-1330,HIGH,1.4.0,"1.5.2, 1.6.1","https://github.com/advisories/GHSA-95q3-pppp-r683
+https://lists.apache.org/thread.html/395cb6bcf367702acd1e580a1f39b56cdd7a5953d0368b4c1adb1dde@<dev.mesos.apache.org>
+https://nvd.nist.gov/vuln/detail/CVE-2018-1330",,
+org.apache.mesos:mesos,opt/truera/deps/spark/jars/mesos-1.4.0-shaded-protobuf.jar,CVE-2019-0204,HIGH,1.4.0,"1.4.3, 1.5.3, 1.6.2, 1.7.2, 1.8.1","http://www.securityfocus.com/bid/107605
+https://access.redhat.com/errata/RHSA-2019:3892
+https://access.redhat.com/security/cve/CVE-2019-0204",,
+org.apache.mesos:mesos,opt/truera/deps/spark/jars/mesos-1.4.0-shaded-protobuf.jar,CVE-2019-5736,HIGH,1.4.0,1.7.1,"http://lists.opensuse.org/opensuse-security-announce/2019-03/msg00044.html
+http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00074.html
+http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00091.html",,
+org.apache.mina:mina-core,opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar,CVE-2019-0231,HIGH,2.0.4,"2.0.21, 2.1.1","http://mina.apache.org/mina-project/index.html#mina-211-mina-2021-released-posted-on-april-14-2019
+https://access.redhat.com/security/cve/CVE-2019-0231
+https://github.com/advisories/GHSA-5h29-qq92-wj7f",,
+org.apache.spark:spark-core_2.11,opt/truera/deps/apache-hive-3.1.3-bin/lib/spark-core_2.11-2.3.0.jar,CVE-2019-10099,HIGH,2.3.0,2.3.3,"https://github.com/advisories/GHSA-fp5j-3fpf-mhj5
+https://lists.apache.org/thread.html/c2a39c207421797f82823a8aff488dcd332d9544038307bf69a2ba9e@%3Cuser.spark.apache.org%3E
+https://lists.apache.org/thread.html/ra216b7b0dd82a2c12c2df9d6095e689eb3f3d28164e6b6587da69fae@%3Ccommits.spark.apache.org%3E",,
+org.apache.thrift:libthrift,opt/truera/deps/spark/jars/libthrift-0.12.0.jar,CVE-2019-0205,HIGH,0.12.0,0.13.0,"http://mail-archives.apache.org/mod_mbox/thrift-dev/201910.mbox/%3CVI1PR0101MB2142E0EA19F582429C3AEBCBB1920%40VI1PR0101MB2142.eurprd01.prod.exchangelabs.com%3E
+https://access.redhat.com/errata/RHSA-2020:0804
+https://access.redhat.com/errata/RHSA-2020:0805",,
+org.apache.thrift:libthrift,opt/truera/deps/spark/jars/libthrift-0.12.0.jar,CVE-2019-0210,HIGH,0.12.0,0.13.0,"http://mail-archives.apache.org/mod_mbox/thrift-dev/201910.mbox/%3C277A46CA87494176B1BBCF5D72624A2A%40HAGGIS%3E
+https://access.redhat.com/errata/RHSA-2020:0804
+https://access.redhat.com/errata/RHSA-2020:0805",,
+org.apache.thrift:libthrift,opt/truera/deps/spark/jars/libthrift-0.12.0.jar,CVE-2020-13949,HIGH,0.12.0,0.14.0,"https://access.redhat.com/security/cve/CVE-2020-13949
+https://github.com/advisories/GHSA-g2fg-mr77-6vrm
+https://github.com/apache/hbase/pull/2958",,
+org.apache.thrift:libthrift,"opt/truera/bin/data-svc-streaming-runner/lib/libthrift-0.9.3.jar
+opt/truera/bin/data-svc/lib/libthrift-0.9.3.jar
+opt/truera/bin/monitoring/lib/libthrift-0.9.3.jar
+opt/truera/config.default/lib/libthrift-0.9.3.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/libthrift-0.9.3.jar",CVE-2018-1320,HIGH,0.9.3,0.12.0,"http://www.openwall.com/lists/oss-security/2019/07/24/3
+http://www.securityfocus.com/bid/106551
+https://access.redhat.com/errata/RHSA-2019:2413",,
+org.apache.thrift:libthrift,"opt/truera/bin/data-svc-streaming-runner/lib/libthrift-0.9.3.jar
+opt/truera/bin/data-svc/lib/libthrift-0.9.3.jar
+opt/truera/bin/monitoring/lib/libthrift-0.9.3.jar
+opt/truera/config.default/lib/libthrift-0.9.3.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/libthrift-0.9.3.jar",CVE-2019-0205,HIGH,0.9.3,0.13.0,"http://mail-archives.apache.org/mod_mbox/thrift-dev/201910.mbox/%3CVI1PR0101MB2142E0EA19F582429C3AEBCBB1920%40VI1PR0101MB2142.eurprd01.prod.exchangelabs.com%3E
+https://access.redhat.com/errata/RHSA-2020:0804
+https://access.redhat.com/errata/RHSA-2020:0805",,
+org.apache.thrift:libthrift,"opt/truera/bin/data-svc-streaming-runner/lib/libthrift-0.9.3.jar
+opt/truera/bin/data-svc/lib/libthrift-0.9.3.jar
+opt/truera/bin/monitoring/lib/libthrift-0.9.3.jar
+opt/truera/config.default/lib/libthrift-0.9.3.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/libthrift-0.9.3.jar",CVE-2019-0210,HIGH,0.9.3,0.13.0,http://mail-archives.apache.org/mod_mbox/thrift-dev/201910.mbox/%3C277A46CA87494176B1BBCF5D72624A2A%40HAGGIS%3Ehttps://access.redhat.com/errata/RHSA-2020:0804https://access.redhat.com/errata/RHSA-2020:0805,,
+org.apache.thrift:libthrift,"opt/truera/bin/data-svc-streaming-runner/lib/libthrift-0.9.3.jar
+opt/truera/bin/data-svc/lib/libthrift-0.9.3.jar
+opt/truera/bin/monitoring/lib/libthrift-0.9.3.jar
+opt/truera/config.default/lib/libthrift-0.9.3.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/libthrift-0.9.3.jar",CVE-2020-13949,HIGH,0.9.3,0.14.0,"https://access.redhat.com/security/cve/CVE-2020-13949
+https://github.com/advisories/GHSA-g2fg-mr77-6vrm
+https://github.com/apache/hbase/pull/2958",,
+org.apache.thrift:libthrift,opt/truera/deps/trino-server/plugin/accumulo/libthrift-0.9.3-1.jar,CVE-2018-1320,HIGH,0.9.3-1,0.12.0,"http://www.openwall.com/lists/oss-security/2019/07/24/3
+http://www.securityfocus.com/bid/106551
+https://access.redhat.com/errata/RHSA-2019:2413",,
+org.apache.thrift:libthrift,opt/truera/deps/trino-server/plugin/accumulo/libthrift-0.9.3-1.jar,CVE-2019-0205,HIGH,0.9.3-1,0.13.0,"http://mail-archives.apache.org/mod_mbox/thrift-dev/201910.mbox/%3CVI1PR0101MB2142E0EA19F582429C3AEBCBB1920%40VI1PR0101MB2142.eurprd01.prod.exchangelabs.com%3E
+https://access.redhat.com/errata/RHSA-2020:0804
+https://access.redhat.com/errata/RHSA-2020:0805",,
+org.apache.thrift:libthrift,opt/truera/deps/trino-server/plugin/accumulo/libthrift-0.9.3-1.jar,CVE-2019-0210,HIGH,0.9.3-1,0.13.0,"http://mail-archives.apache.org/mod_mbox/thrift-dev/201910.mbox/%3C277A46CA87494176B1BBCF5D72624A2A%40HAGGIS%3E
+https://access.redhat.com/errata/RHSA-2020:0804
+https://access.redhat.com/errata/RHSA-2020:0805",,
+org.apache.thrift:libthrift,opt/truera/deps/trino-server/plugin/accumulo/libthrift-0.9.3-1.jar,CVE-2020-13949,HIGH,0.9.3-1,0.14.0,"https://access.redhat.com/security/cve/CVE-2020-13949
+https://github.com/advisories/GHSA-g2fg-mr77-6vrm
+https://github.com/apache/hbase/pull/2958",,
+org.apache.velocity:velocity,opt/truera/deps/apache-hive-3.1.3-bin/lib/velocity-1.7.jar,CVE-2020-13936,HIGH,1.7,,"http://www.openwall.com/lists/oss-security/2021/03/10/1
+https://access.redhat.com/security/cve/CVE-2020-13936
+https://github.com/advisories/GHSA-59j4-wjwp-mw9m",,
+org.apache.zookeeper:zookeeper,opt/truera/deps/apache-hive-3.1.3-bin/lib/zookeeper-3.4.6.jar,CVE-2017-5637,HIGH,3.4.6,"3.4.10, 3.5.3","http://www.debian.org/security/2017/dsa-3871
+http://www.securityfocus.com/bid/98814
+https://access.redhat.com/errata/RHSA-2017:2477",,
+org.apache.zookeeper:zookeeper,opt/truera/deps/apache-hive-3.1.3-bin/lib/zookeeper-3.4.6.jar,CVE-2018-8012,HIGH,3.4.6,"3.4.10, 3.5.4","http://openwall.com/lists/oss-security/2018/05/21/6
+http://www.openwall.com/lists/oss-security/2018/05/21/6
+http://www.securityfocus.com/bid/104253",,
+org.codehaus.jackson:jackson-mapper-asl,"opt/truera/bin/monitoring/lib/jackson-mapper-asl-1.9.13.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jackson-mapper-asl-1.9.13.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/hadoop-yarn-applications-catalog-webapp-3.3.3.war
+opt/truera/deps/spark/jars/jackson-mapper-asl-1.9.13.jar",CVE-2019-10172,HIGH,1.9.13,,"https://access.redhat.com/security/cve/CVE-2019-10172
+https://bugzilla.redhat.com/show_bug.cgi?id=1715075
+https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2019-10172",,
+org.codehaus.jettison:jettison,"opt/truera/bin/data-svc/lib/jettison-1.1.jar
+opt/truera/bin/spark-join-job/spark-join-job.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jettison-1.1.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/client/hadoop-client-minicluster-3.3.3.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/common/lib/jettison-1.1.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/hdfs/lib/jettison-1.1.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/hadoop-yarn-applications-catalog-webapp-3.3.3.war
+opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar
+opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar",CVE-2022-40149,HIGH,1.1,,"https://access.redhat.com/security/cve/CVE-2022-40149
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=46538
+https://github.com/advisories/GHSA-56h3-78gp-v83r",,
+org.codehaus.jettison:jettison,"opt/truera/bin/data-svc/lib/jettison-1.1.jar
+opt/truera/bin/spark-join-job/spark-join-job.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jettison-1.1.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/client/hadoop-client-minicluster-3.3.3.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/common/lib/jettison-1.1.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/hdfs/lib/jettison-1.1.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/hadoop-yarn-applications-catalog-webapp-3.3.3.war
+opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar
+opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar",CVE-2022-40150,HIGH,1.1,,"https://access.redhat.com/security/cve/CVE-2022-40150
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=46549
+https://github.com/advisories/GHSA-x27m-9w8j-5vcw",,
+org.codehaus.jettison:jettison,"opt/truera/bin/data-svc/lib/jettison-1.1.jar
+opt/truera/bin/spark-join-job/spark-join-job.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jettison-1.1.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/client/hadoop-client-minicluster-3.3.3.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/common/lib/jettison-1.1.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/hdfs/lib/jettison-1.1.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/hadoop-yarn-applications-catalog-webapp-3.3.3.war
+opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar
+opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar",CVE-2022-45685,HIGH,1.1,1.5.2,"https://github.com/advisories/GHSA-7rf3-mqpx-h7xg
+https://github.com/jettison-json/jettison/issues/54
+https://lists.debian.org/debian-lts-announce/2022/12/msg00045.html",,
+org.codehaus.jettison:jettison,"opt/truera/bin/data-svc/lib/jettison-1.1.jar
+opt/truera/bin/spark-join-job/spark-join-job.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jettison-1.1.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/client/hadoop-client-minicluster-3.3.3.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/common/lib/jettison-1.1.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/hdfs/lib/jettison-1.1.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/hadoop-yarn-applications-catalog-webapp-3.3.3.war
+opt/truera/deps/trino-server/plugin/phoenix/phoenix-client-4.14.1-HBase-1.4-embedded.jar
+opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar",CVE-2022-45693,HIGH,1.1,1.5.2,"https://access.redhat.com/security/cve/CVE-2022-45693
+https://github.com/advisories/GHSA-grr4-wv38-f68w
+https://github.com/jettison-json/jettison/issues/52",,
+org.eclipse.jetty.http2:http2-server,opt/truera/deps/trino-server/lib/http2-server-9.4.44.v20210927.jar,CVE-2022-2048,HIGH,9.4.44.v20210927,"9.4.47, 10.0.10, 11.0.10","http://www.openwall.com/lists/oss-security/2022/09/09/2
+https://access.redhat.com/security/cve/CVE-2022-2048
+https://github.com/advisories/GHSA-wgmr-mf83-7x4j",,
+org.eclipse.jetty:jetty-client,"opt/truera/bin/data-svc-streaming-runner/lib/jetty-client-9.3.20.v20170531.jar
+opt/truera/bin/monitoring/lib/jetty-client-9.3.20.v20170531.jar
+opt/truera/config.default/lib/jetty-client-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/jdbc/hive-jdbc-3.1.3-standalone.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-client-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/spark-core_2.11-2.3.0.jar",CVE-2020-27216,HIGH,9.3.20.v20170531,"9.4.33.v20201020, 10.0.0.beta3, 11.0.0.beta3","https://access.redhat.com/security/cve/CVE-2020-27216
+https://bugs.eclipse.org/bugs/show_bug.cgi?id=567921
+https://cwe.mitre.org/data/definitions/378.html",,
+org.eclipse.jetty:jetty-client,"opt/truera/bin/data-svc-streaming-runner/lib/jetty-client-9.3.20.v20170531.jar
+opt/truera/bin/monitoring/lib/jetty-client-9.3.20.v20170531.jar
+opt/truera/config.default/lib/jetty-client-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/jdbc/hive-jdbc-3.1.3-standalone.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-client-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/spark-core_2.11-2.3.0.jar",CVE-2021-28165,HIGH,9.3.20.v20170531,"9.4.39.v20210325, 10.0.2, 11.0.2","http://www.openwall.com/lists/oss-security/2021/04/20/3
+https://access.redhat.com/security/cve/CVE-2021-28165
+https://github.com/advisories/GHSA-26vr-8j45-3r4w",,
+org.eclipse.jetty:jetty-http,"opt/truera/deps/apache-hive-3.1.3-bin/jdbc/hive-jdbc-3.1.3-standalone.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-http-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-runner-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/spark-core_2.11-2.3.0.jar",CVE-2020-27216,HIGH,9.3.20.v20170531,"9.4.33.v20201020, 10.0.0.beta3, 11.0.0.beta3","https://access.redhat.com/security/cve/CVE-2020-27216
+https://bugs.eclipse.org/bugs/show_bug.cgi?id=567921
+https://cwe.mitre.org/data/definitions/378.html",,
+org.eclipse.jetty:jetty-http,"opt/truera/deps/apache-hive-3.1.3-bin/jdbc/hive-jdbc-3.1.3-standalone.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-http-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-runner-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/spark-core_2.11-2.3.0.jar",CVE-2021-28165,HIGH,9.3.20.v20170531,"9.4.39.v20210325, 10.0.2, 11.0.2","http://www.openwall.com/lists/oss-security/2021/04/20/3
+https://access.redhat.com/security/cve/CVE-2021-28165
+https://github.com/advisories/GHSA-26vr-8j45-3r4w",,
+org.eclipse.jetty:jetty-http,opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar,CVE-2020-27216,HIGH,9.3.24.v20180605,"9.4.33.v20201020, 10.0.0.beta3, 11.0.0.beta3","https://access.redhat.com/security/cve/CVE-2020-27216
+https://bugs.eclipse.org/bugs/show_bug.cgi?id=567921
+https://cwe.mitre.org/data/definitions/378.html",,
+org.eclipse.jetty:jetty-http,"opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar
+opt/truera/deps/apache-hive-3.1.3-bin/jdbc/hive-jdbc-3.1.3-standalone.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-io-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-runner-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/spark-core_2.11-2.3.0.jar
+opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar",CVE-2021-28165,HIGH,9.3.24.v20180605,"9.4.39.v20210325, 10.0.2, 11.0.2","http://www.openwall.com/lists/oss-security/2021/04/20/3
+https://access.redhat.com/security/cve/CVE-2021-28165
+https://github.com/advisories/GHSA-26vr-8j45-3r4w",,
+org.eclipse.jetty:jetty-server,"opt/truera/deps/apache-hive-3.1.3-bin/jdbc/hive-jdbc-3.1.3-standalone.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-runner-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-server-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/spark-core_2.11-2.3.0.jar",CVE-2017-7656,HIGH,9.3.20.v20170531,"9.2.26.v20180806, 9.3.24.v20180605, 9.4.11.v20180605","http://www.securitytracker.com/id/1041194
+https://access.redhat.com/security/cve/CVE-2017-7656
+https://bugs.eclipse.org/bugs/show_bug.cgi?id=535667",,
+org.eclipse.jetty:jetty-server,"opt/truera/deps/apache-hive-3.1.3-bin/jdbc/hive-jdbc-3.1.3-standalone.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-runner-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-server-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/spark-core_2.11-2.3.0.jar",CVE-2018-12545,HIGH,9.3.20.v20170531,9.4.13.v20181111,"https://access.redhat.com/security/cve/CVE-2018-12545
+https://bugs.eclipse.org/bugs/show_bug.cgi?id=538096
+https://github.com/advisories/GHSA-h2f4-v4c4-6wx4",,
+org.eclipse.jetty:jetty-server,"opt/truera/deps/apache-hive-3.1.3-bin/jdbc/hive-jdbc-3.1.3-standalone.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-runner-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-server-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/spark-core_2.11-2.3.0.jar",CVE-2020-27216,HIGH,9.3.20.v20170531,"9.4.33.v20201020, 10.0.0.beta3, 11.0.0.beta3","https://access.redhat.com/security/cve/CVE-2020-27216
+https://bugs.eclipse.org/bugs/show_bug.cgi?id=567921
+https://cwe.mitre.org/data/definitions/378.html",,
+org.eclipse.jetty:jetty-server,"opt/truera/deps/apache-hive-3.1.3-bin/jdbc/hive-jdbc-3.1.3-standalone.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-runner-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-server-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/spark-core_2.11-2.3.0.jar",CVE-2021-28165,HIGH,9.3.20.v20170531,"9.4.39.v20210325, 10.0.2, 11.0.2","http://www.openwall.com/lists/oss-security/2021/04/20/3
+https://access.redhat.com/security/cve/CVE-2021-28165
+https://github.com/advisories/GHSA-26vr-8j45-3r4w",,
+org.eclipse.jetty:jetty-server,opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar,CVE-2018-12545,HIGH,9.3.24.v20180605,9.4.13.v20181111,"https://access.redhat.com/security/cve/CVE-2018-12545
+https://bugs.eclipse.org/bugs/show_bug.cgi?id=538096
+https://github.com/advisories/GHSA-h2f4-v4c4-6wx4",,
+org.eclipse.jetty:jetty-server,opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar,CVE-2020-27216,HIGH,9.3.24.v20180605,"9.4.33.v20201020, 10.0.0.beta3, 11.0.0.beta3","https://access.redhat.com/security/cve/CVE-2020-27216
+https://bugs.eclipse.org/bugs/show_bug.cgi?id=567921
+https://cwe.mitre.org/data/definitions/378.html",,
+org.eclipse.jetty:jetty-server,opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar,CVE-2021-28165,HIGH,9.3.24.v20180605,"9.4.39.v20210325, 10.0.2, 11.0.2","http://www.openwall.com/lists/oss-security/2021/04/20/3
+https://access.redhat.com/security/cve/CVE-2021-28165
+https://github.com/advisories/GHSA-26vr-8j45-3r4w",,
+org.eclipse.jetty:jetty-util,"opt/truera/deps/apache-hive-3.1.3-bin/jdbc/hive-jdbc-3.1.3-standalone.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-runner-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-util-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/spark-core_2.11-2.3.0.jar",CVE-2017-9735,HIGH,9.3.20.v20170531,9.4.6.v20170531,"http://www.securityfocus.com/bid/99104
+https://access.redhat.com/security/cve/CVE-2017-9735
+https://bugs.debian.org/864631",,
+org.eclipse.jetty:jetty-util,"opt/truera/deps/apache-hive-3.1.3-bin/jdbc/hive-jdbc-3.1.3-standalone.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-runner-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-util-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/spark-core_2.11-2.3.0.jar",CVE-2020-27216,HIGH,9.3.20.v20170531,"9.4.33.v20201020, 10.0.0.beta3, 11.0.0.beta3","https://access.redhat.com/security/cve/CVE-2020-27216
+https://bugs.eclipse.org/bugs/show_bug.cgi?id=567921
+https://cwe.mitre.org/data/definitions/378.html",,
+org.eclipse.jetty:jetty-util,"opt/truera/deps/apache-hive-3.1.3-bin/jdbc/hive-jdbc-3.1.3-standalone.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-runner-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-util-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/spark-core_2.11-2.3.0.jar",CVE-2021-28165,HIGH,9.3.20.v20170531,"9.4.39.v20210325, 10.0.2, 11.0.2","http://www.openwall.com/lists/oss-security/2021/04/20/3
+https://access.redhat.com/security/cve/CVE-2021-28165
+https://github.com/advisories/GHSA-26vr-8j45-3r4w",,
+org.eclipse.jetty:jetty-util,opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar,CVE-2017-9735,HIGH,9.3.24.v20180605,9.4.6.v20170531,"http://www.securityfocus.com/bid/99104
+https://access.redhat.com/security/cve/CVE-2017-9735
+https://bugs.debian.org/864631",,
+org.eclipse.jetty:jetty-util,opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar,CVE-2020-27216,HIGH,9.3.24.v20180605,"9.4.33.v20201020, 10.0.0.beta3, 11.0.0.beta3","https://access.redhat.com/security/cve/CVE-2020-27216
+https://bugs.eclipse.org/bugs/show_bug.cgi?id=567921
+https://cwe.mitre.org/data/definitions/378.html",,
+org.eclipse.jetty:jetty-util,opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar,CVE-2021-28165,HIGH,9.3.24.v20180605,"9.4.39.v20210325, 10.0.2, 11.0.2","http://www.openwall.com/lists/oss-security/2021/04/20/3
+https://access.redhat.com/security/cve/CVE-2021-28165
+https://github.com/advisories/GHSA-26vr-8j45-3r4w",,
+org.eclipse.jetty:jetty-webapp,"opt/truera/bin/data-svc-streaming-runner/lib/jetty-webapp-9.3.20.v20170531.jar
+opt/truera/bin/monitoring/lib/jetty-webapp-9.3.20.v20170531.jar
+opt/truera/config.default/lib/jetty-webapp-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/jdbc/hive-jdbc-3.1.3-standalone.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-runner-9.3.20.v20170531.jar
+opt/truera/deps/apache-hive-3.1.3-bin/lib/jetty-webapp-9.3.20.v20170531.jar
+opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar",CVE-2020-27216,HIGH,9.3.20.v20170531,"9.4.33.v20201020, 10.0.0.beta3, 11.0.0.beta3","https://access.redhat.com/security/cve/CVE-2020-27216
+https://bugs.eclipse.org/bugs/show_bug.cgi?id=567921
+https://cwe.mitre.org/data/definitions/378.html",,
+org.elasticsearch:elasticsearch,opt/truera/deps/trino-server/plugin/elasticsearch/elasticsearch-6.0.0.jar,CVE-2018-3831,HIGH,6.0.0,"5.6.12, 6.4.1","https://access.redhat.com/security/cve/CVE-2018-3831
+https://discuss.elastic.co/t/elastic-stack-6-4-1-and-5-6-12-security-update/149035
+https://github.com/advisories/GHSA-r9fv-qpm9-rj4g",,
+org.elasticsearch:elasticsearch,opt/truera/deps/trino-server/plugin/elasticsearch/elasticsearch-6.0.0.jar,CVE-2019-7611,HIGH,6.0.0,"5.6.15, 6.6.1","https://access.redhat.com/security/cve/CVE-2019-7611
+https://discuss.elastic.co/t/elastic-stack-6-6-1-and-5-6-15-security-update/169077
+https://github.com/advisories/GHSA-fj32-6v7m-57pg",,
+org.jdom:jdom2,opt/truera/deps/hadoop-3.3.3/share/hadoop/tools/lib/jdom2-2.0.6.jar,CVE-2021-33813,HIGH,2.0.6,2.0.6.1,"https://access.redhat.com/security/cve/CVE-2021-33813
+https://alephsecurity.com/vulns/aleph-2021003
+https://github.com/advisories/GHSA-2363-cqg2-863c",,
+org.keycloak:keycloak-saml-core,opt/truera/deps/keycloak/modules/system/layers/keycloak/org/keycloak/keycloak-saml-core/main/keycloak-saml-core-16.1.1.jar,CVE-2021-3827,HIGH,16.1.1,18.0.0,"https://access.redhat.com/security/cve/CVE-2021-3827
+https://bugzilla.redhat.com/show_bug.cgi?id=2007512
+https://github.com/advisories/GHSA-4pc7-vqv5-5r3v",,
+org.keycloak:keycloak-saml-core,opt/truera/deps/keycloak/modules/system/layers/keycloak/org/keycloak/keycloak-saml-core/main/keycloak-saml-core-16.1.1.jar,CVE-2022-2668,HIGH,16.1.1,,"https://access.redhat.com/security/cve/CVE-2022-2668
+https://bugzilla.redhat.com/show_bug.cgi?id=2115392
+https://github.com/advisories/GHSA-wf7g-7h6h-678v",,
+org.postgresql:postgresql,opt/truera/deps/trino-server/plugin/postgresql/postgresql-42.3.4.jar,CVE-2022-31197,HIGH,42.3.4,"42.2.26, 42.3.7, 42.4.1","https://access.redhat.com/security/cve/CVE-2022-31197
+https://github.com/advisories/GHSA-r38f-c4h4-hqq2
+https://github.com/pgjdbc/pgjdbc/commit/739e599d52ad80f8dcd6efedc6157859b1a9d637",,
+org.postgresql:postgresql,opt/truera/deps/apache-hive-3.1.3-bin/lib/postgresql-9.4.1208.jre7.jar,CVE-2020-13692,HIGH,9.4.1208.jre7,42.2.13,"https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2020-13692.json
+https://access.redhat.com/security/cve/CVE-2020-13692
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-13692",,
+org.scala-lang:scala-compiler,opt/truera/deps/apache-hive-3.1.3-bin/lib/scala-compiler-2.11.0.jar,CVE-2017-15288,HIGH,2.11.0,"2.10.7, 2.11.12, 2.12.4","http://scala-lang.org/news/security-update-nov17.html
+https://access.redhat.com/security/cve/CVE-2017-15288
+https://github.com/advisories/GHSA-qvxv-pmq9-4q7g",,
+"org.wildfly.openssl:wildfly-openssl
+org.wildfly.openssl:wildfly-openssl-java","opt/truera/bin/spark-join-job/spark-join-job.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/tools/lib/wildfly-openssl-1.0.7.Final.jar",CVE-2020-25644,HIGH,1.0.7.Final,1.1.3.Final,"https://access.redhat.com/security/cve/CVE-2020-25644
+https://bugzilla.redhat.com/show_bug.cgi?id=1885485
+https://github.com/wildfly-security/wildfly-openssl-natives/pull/4/files",,
+org.yaml:snakeyaml,opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar,CVE-2017-18640,HIGH,1.11,1.26,"https://access.redhat.com/security/cve/CVE-2017-18640
+https://bitbucket.org/asomov/snakeyaml/commits/da11ddbd91c1f8392ea932b37fa48110fa54ed8c
+https://bitbucket.org/asomov/snakeyaml/issues/377/allow-configuration-for-preventing-billion",,
+org.yaml:snakeyaml,opt/truera/deps/trino-server/plugin/phoenix5/phoenix-client-embedded-hbase-2.2-5.1.2.jar,CVE-2022-25857,HIGH,1.11,1.31,"https://access.redhat.com/errata/RHSA-2022:6820
+https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-25857.json
+https://access.redhat.com/security/cve/CVE-2022-25857",,
+org.yaml:snakeyaml,opt/truera/deps/trino-server/plugin/delta-lake/calcite-core-1.21.0.151-shaded.jar,CVE-2017-18640,HIGH,1.23,1.26,"https://access.redhat.com/security/cve/CVE-2017-18640
+https://bitbucket.org/asomov/snakeyaml/commits/da11ddbd91c1f8392ea932b37fa48110fa54ed8c
+https://bitbucket.org/asomov/snakeyaml/issues/377/allow-configuration-for-preventing-billion",,
+org.yaml:snakeyaml,"opt/truera/deps/trino-server/plugin/delta-lake/calcite-core-1.21.0.151-shaded.jar
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/hadoop-yarn-applications-catalog-webapp-3.3.3.war
+opt/truera/deps/hadoop-3.3.3/share/hadoop/yarn/lib/snakeyaml-1.26.jar
+opt/truera/deps/keycloak/modules/system/layers/base/org/yaml/snakeyaml/main/snakeyaml-1.26.jar
+opt/truera/deps/spark/jars/snakeyaml-1.27.jar",CVE-2022-25857,HIGH,1.23,1.31,"https://access.redhat.com/errata/RHSA-2022:6820
+https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-25857.json
+https://access.redhat.com/security/cve/CVE-2022-25857",,
+xerces:xercesImpl,opt/truera/deps/apache-hive-3.1.3-bin/hcatalog/share/webhcat/svr/lib/xercesImpl-2.9.1.jar,CVE-2012-0881,HIGH,2.9.1,2.12.0,"http://www.openwall.com/lists/oss-security/2014/07/08/11
+https://access.redhat.com/security/cve/CVE-2012-0881
+https://bugzilla.redhat.com/show_bug.cgi?id=787104",,
+xerces:xercesImpl,opt/truera/deps/apache-hive-3.1.3-bin/hcatalog/share/webhcat/svr/lib/xercesImpl-2.9.1.jar,CVE-2013-4002,HIGH,2.9.1,2.12.0,"http://lists.apple.com/archives/security-announce/2013/Oct/msg00001.html
+http://lists.opensuse.org/opensuse-security-announce/2013-07/msg00026.html
+http://lists.opensuse.org/opensuse-security-announce/2013-07/msg00027.html",,
+,,,,,,,,
+node/Javascript,,,,,,,,
+Package,Package Path,Vuln ID,Severity,Version,Fixed Version,Links,,Justification
+json5,opt/truera/bin/frontend-node/node_modules/@babel/core/node_modules/json5/package.json,CVE-2022-46175,HIGH,2.2.1,"1.0.2, 2.2.2","https://access.redhat.com/security/cve/CVE-2022-46175
+https://github.com/advisories/GHSA-9c47-m6qq-7p4h
+https://github.com/json5/json5/issues/199",5,"A flaw was found in the json5 package. The affected version of the json5 package could allow an attacker to set arbitrary and unexpected keys on the object returned from JSON5.parse.
+
+Fix available in version 2.2.2+ we will fix this immediatly"
+qs,opt/truera/bin/frontend-node/node_modules/formidable/node_modules/qs/package.json,CVE-2022-24999,HIGH,6.9.3,"6.2.4, 6.3.3, 6.4.1, 6.5.3, 6.6.1, 6.7.3, 6.8.3, 6.9.7, 6.10.3","https://access.redhat.com/security/cve/CVE-2022-24999
+https://github.com/advisories/GHSA-hrpp-h998-j3pp
+https://github.com/expressjs/express/releases/tag/4.17.3",4,"qs before 6.10.3, as used in Express before 4.17.3 and other products, allows attackers to cause a Node process hang for an Express application because an __ proto__ key can be used
+
+Json5 is not being used"
+,,,,,,,,
+python,,,,,,,,
+Package,Package Path,Vuln ID,Severity,Version,Fixed Version,Links,Category,Justification
+future,opt/truera/deps/miniconda3/envs/rnn_fe/lib/python3.9/site-packages/future-0.18.2.dist-info/METADATA,CVE-2022-40899,HIGH,0.18.2,,"https://github.com/PythonCharmers/python-future/blob/master/src/future/backports/http/cookiejar.py#L215
+https://github.com/advisories/GHSA-v3c5-jqr6-7qm8
+https://github.com/python/cpython/pull/17157",5,"An issue discovered in Python Charmers Future 0.18.2 and earlier allows remote attackers to cause a denial of service via crafted Set-Cookie header from malicious web server. This issue has been patched in version 0.18.3.
+
+Fix available in version 0.18.3. Will patch immediatly "
+protobuf,"opt/truera/deps/miniconda3/envs/aiq/lib/python3.9/site-packages/protobuf-3.20.1.dist-info/METADATA
+opt/truera/deps/miniconda3/envs/artifactrepo/lib/python3.9/site-packages/protobuf-3.20.1.dist-info/METADATA
+opt/truera/deps/miniconda3/envs/backup_service/lib/python3.9/site-packages/protobuf-3.20.1.dist-info/METADATA
+opt/truera/deps/miniconda3/envs/metarepo_load/lib/python3.9/site-packages/protobuf-3.20.1.dist-info/METADATA
+opt/truera/deps/miniconda3/envs/modelrunner/lib/python3.9/site-packages/protobuf-3.20.1.dist-info/METADATA
+opt/truera/deps/miniconda3/envs/rnn_fe/lib/python3.9/site-packages/protobuf-3.20.1.dist-info/METADATA",CVE-2022-1941,HIGH,3.20.1,"4.21.6, 3.20.2, 3.19.5, 3.18.3","http://www.openwall.com/lists/oss-security/2022/09/27/1
+https://cloud.google.com/support/bulletins#GCP-2022-019
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1941",1,"A parsing vulnerability for the MessageSet type in the ProtocolBuffers versions prior to and including 3.16.1, 3.17.3, 3.18.2, 3.19.4, 3.20.1 and 3.21.5 for protobuf-cpp, and versions prior to and including 3.16.1, 3.17.3, 3.18.2, 3.19.4, 3.20.1 and 4.21.5 for protobuf-python can lead to out of memory failures. A specially crafted message with multiple key-value per elements creates parsing issues, and can lead to a Denial of Service against services receiving unsanitized input. We recommend upgrading to versions 3.18.3, 3.19.5, 3.20.2, 3.21.6 for protobuf-cpp and 3.18.3, 3.19.5, 3.20.2, 4.21.6 for protobuf-python. Versions for 3.16 and 3.17 are no longer updated.
+
+We use version 4.21.10 of protobuf-python and 1.50.0 of protobuf-cpp"
+py,opt/truera/deps/miniconda3/envs/rnn_fe/lib/python3.9/site-packages/py-1.11.0.dist-info/METADATA,CVE-2022-42969,HIGH,1.11.0,,"https://github.com/advisories/GHSA-w596-4wvx-j9j6
+https://github.com/pytest-dev/py/blob/cb87a83960523a2367d0f19226a73aed4ce4291d/py/_path/svnurl.py#L316
+https://github.com/pytest-dev/py/issues/287",2,"The py library through 1.11.0 for Python allows remote attackers to conduct a ReDoS (Regular expression Denial of Service) attack via a Subversion repository with crafted info data, because the InfoSvnCommand argument is mishandled.
+
+The particular codepath in question is the regular expression at py._path.svnurl.InfoSvnCommand.lspattern and is only relevant when dealing with subversion (svn) projects. Notably the codepath is not used in the popular pytest project. The developers of the pytest package have released version 7.2.0 which removes their dependency on py. Users of pytest seeing alerts relating to this advisory may update to version 7.2.0 of pytest to resolve this issue. See pytest-dev/py#287 (comment) for additional context.
+
+
+"
+setuptools,opt/truera/deps/miniconda3/envs/aiq/lib/python3.9/site-packages/setuptools-61.2.0-py3.9.egg-info/PKG-INFO,CVE-2022-40897,HIGH,61.2.0,65.5.1,"https://access.redhat.com/security/cve/CVE-2022-40897
+https://github.com/advisories/GHSA-r9hx-vwmv-q579
+https://github.com/pypa/setuptools/blob/fe8a98e696241487ba6ac9f91faa38ade939ec5d/setuptools/package_index.py#L200",,
+wheel,opt/truera/deps/miniconda3/envs/aiq/lib/python3.9/site-packages/wheel-0.37.1-py3.9.egg-info/PKG-INFO,CVE-2022-40898,HIGH,0.37.1,0.38.1,"https://github.com/advisories/GHSA-qwmp-2cf2-g9g6
+https://github.com/pypa/wheel/blob/main/src/wheel/wheelfile.py#L18
+https://nvd.nist.gov/vuln/detail/CVE-2022-40898",,
+,,,,,,,,
+go binary,,,,,,,,
+Package,Package Path,Vuln ID,Severity,Version,Fixed Version,Links,Category,Justification
+github.com/prometheus/client_golang,opt/truera/deps/grafana/bin/grafana-cli,CVE-2022-21698,HIGH,v1.11.0,1.11.1,"https://access.redhat.com/errata/RHSA-2022:8057
+https://access.redhat.com/security/cve/CVE-2022-21698
+https://bugzilla.redhat.com/2044628",,
+golang.org/x/crypto,"opt/truera/deps/grafana/bin/grafana-cli
+opt/truera/deps/grafana/bin/grafana-server
+opt/truera/deps/vault/vault","CVE-2021-43565
+CVE-2022-27191",HIGH,"v0.0.0-20210616213533-5ff15b29337e
+v0.0.0-20210616213533-5ff15b29337e","0.0.0-20211202192323-5770296d904e
+0.0.0-20220314234659-1baeb1ce4c0b","https://access.redhat.com/security/cve/CVE-2021-43565
+https://github.com/advisories/GHSA-gwc9-m7rh-j2ww
+https://go.dev/cl/368814/
+https://access.redhat.com/errata/RHSA-2022:8008
+https://access.redhat.com/security/cve/CVE-2022-27191
+https://bugzilla.redhat.com/1939485",,
+golang.org/x/net,opt/truera/deps/grafana/bin/grafana-cli,"CVE-2021-44716
+CVE-2022-27664",HIGH,"v0.0.0-20210726213435-c6fcb2dbf985
+v0.0.0-20210726213435-c6fcb2dbf985","0.0.0-20211209124913-491a49abca63
+0.0.0-20220906165146-f3363e06e74c","https://access.redhat.com/security/cve/CVE-2021-44716
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44716https://github.com/golang/go/commit/48d948963c5ce7add72af5665a871caff6c1d35a (go1.17.5)
+https://access.redhat.com/errata/RHSA-2022:7129
+https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-27664.json
+https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-32189.json",,
+golang.org/x/text,opt/truera/deps/grafana/bin/grafana-cli,"CVE-2021-38561
+CVE-2022-32149",HIGH,"v0.3.6
+v0.3.6","0.3.7
+0.3.8","https://access.redhat.com/security/cve/CVE-2021-38561https://deps.dev/advisory/OSV/GO-2021-0113https://go.dev/cl/340830
+https://access.redhat.com/security/cve/CVE-2022-32149
+https://github.com/advisories/GHSA-69ch-w2m2-3vjp
+https://github.com/golang/go/issues/56152",,
+,,,,,,,,
+go binary,,,,,,,,
+Package,Package Path,Vuln ID,Severity,Version,Fixed Version,Links,Category,Justification
+github.com/prometheus/client_golang,opt/truera/deps/grafana/bin/grafana-server,CVE-2022-21698,HIGH,v1.11.0,1.11.1,"https://access.redhat.com/errata/RHSA-2022:8057
+https://access.redhat.com/security/cve/CVE-2022-21698
+https://bugzilla.redhat.com/2044628",,
+github.com/russellhaering/goxmldsig,opt/truera/deps/grafana/bin/grafana-server,"CVE-2020-7711
+CVE-2020-7731",HIGH,"v1.1.0
+v1.1.0","1.1.1
+1.1.1","https://access.redhat.com/security/cve/CVE-2020-7711https://github.com/advisories/GHSA-mqqv-chpx-vq25https://github.com/russellhaering/gosaml2/issues/59
+https://github.com/advisories/GHSA-gq5r-cc4w-g8xfhttps://github.com/advisories/GHSA-prjq-f4q3-fvfrhttps://github.com/russellhaering/gosaml2/issues/59",,
+golang.org/x/net,opt/truera/deps/grafana/bin/grafana-server,"CVE-2021-44716
+CVE-2022-27664
+CVE-2022-27664",HIGH,"v0.0.0-20210726213435-c6fcb2dbf985
+v0.0.0-20210726213435-c6fcb2dbf985, v0.0.0-20220127200216-cd36cc0744dd","0.0.0-20211209124913-491a49abca63
+0.0.0-20220906165146-f3363e06e74c","https://access.redhat.com/security/cve/CVE-2021-44716
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44716
+https://github.com/golang/go/commit/48d948963c5ce7add72af5665a871caff6c1d35a (go1.17.5)
+https://access.redhat.com/errata/RHSA-2022:7129
+https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-27664.json
+https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-32189.json
+https://access.redhat.com/errata/RHSA-2022:7129
+https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-27664.json
+https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-32189.json",,
+golang.org/x/text,opt/truera/deps/grafana/bin/grafana-server,"CVE-2021-38561
+CVE-2022-32149",HIGH,"v0.3.6
+v0.3.6","0.3.7
+0.3.8","https://access.redhat.com/security/cve/CVE-2021-38561
+https://deps.dev/advisory/OSV/GO-2021-0113https://go.dev/cl/340830
+https://access.redhat.com/security/cve/CVE-2022-32149
+https://github.com/advisories/GHSA-69ch-w2m2-3vjp
+https://github.com/golang/go/issues/56152",,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+go binary,,,,,,,,
+Package,Package Path,Vuln ID,Severity,Version,Fixed Version,Links,Category,Justification
+golang.org/x/net,opt/truera/deps/grafana/bin/grafana-cli,CVE-2022-27664,HIGH,v0.0.0-20220127200216-cd36cc0744dd,0.0.0-20220906165146-f3363e06e74c,"https://access.redhat.com/errata/RHSA-2022:7129
+https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-27664.json
+https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-32189.json",,
+golang.org/x/text,opt/truera/deps/opa/opa,CVE-2022-32149,HIGH,v0.3.7,0.3.8,"https://access.redhat.com/security/cve/CVE-2022-32149
+https://github.com/advisories/GHSA-69ch-w2m2-3vjp
+https://github.com/golang/go/issues/56152",,
+,,,,,,,,
+go binary,,,,,,,,
+Package,Package Path,Vuln ID,Severity,Version,Fixed Version,Links,Category,Justification
+golang.org/x/crypto,opt/truera/deps/prometheus/prometheus,CVE-2022-27191,HIGH,v0.0.0-20211215153901-e495a2d5b3d3,0.0.0-20220314234659-1baeb1ce4c0b,"https://access.redhat.com/errata/RHSA-2022:8008
+https://access.redhat.com/security/cve/CVE-2022-27191
+https://bugzilla.redhat.com/1939485",,
+golang.org/x/net,opt/truera/deps/prometheus/prometheus,CVE-2022-27664,HIGH,v0.0.0-20220325170049-de3da57026de,0.0.0-20220906165146-f3363e06e74c,"https://access.redhat.com/errata/RHSA-2022:7129
+https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-27664.json
+https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-32189.json",,
+golang.org/x/text,opt/truera/deps/prometheus/prometheus,CVE-2022-32149,HIGH,v0.3.7,0.3.8,"https://access.redhat.com/security/cve/CVE-2022-32149
+https://github.com/advisories/GHSA-69ch-w2m2-3vjp
+https://github.com/golang/go/issues/56152",,
+,,,,,,,,
+go binary,,,,,,,,
+Package,Package Path,Vuln ID,Severity,Version,Fixed Version,Links,Category,Justification
+golang.org/x/crypto,opt/truera/deps/prometheus/promtool,CVE-2022-27191,HIGH,v0.0.0-20211215153901-e495a2d5b3d3,0.0.0-20220314234659-1baeb1ce4c0b,"https://access.redhat.com/errata/RHSA-2022:8008
+https://access.redhat.com/security/cve/CVE-2022-27191
+https://bugzilla.redhat.com/1939485",,
+golang.org/x/net,opt/truera/deps/prometheus/promtool,CVE-2022-27664,HIGH,v0.0.0-20220325170049-de3da57026de,0.0.0-20220906165146-f3363e06e74c,"https://access.redhat.com/errata/RHSA-2022:7129
+https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-27664.json
+https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-32189.json",,
+golang.org/x/text,opt/truera/deps/prometheus/promtool,CVE-2022-32149,HIGH,v0.3.7,0.3.8,"https://access.redhat.com/security/cve/CVE-2022-32149
+https://github.com/advisories/GHSA-69ch-w2m2-3vjp
+https://github.com/golang/go/issues/56152",,
+,,,,,,,,
+go binary,,,,,,,,
+Package,Package Path,Vuln ID,Severity,Version,Fixed Version,Links,Category,Justification
+golang.org/x/net,opt/truera/deps/temporal/temporal-cassandra-tool,CVE-2022-27664,HIGH,v0.0.0-20220531201128-c960675eff93,0.0.0-20220906165146-f3363e06e74c,"https://access.redhat.com/errata/RHSA-2022:7129
+https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-27664.json
+https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-32189.json",,
+golang.org/x/text,opt/truera/deps/temporal/temporal-cassandra-tool,CVE-2022-32149,HIGH,v0.3.7,0.3.8,"https://access.redhat.com/security/cve/CVE-2022-32149
+https://github.com/advisories/GHSA-69ch-w2m2-3vjp
+https://github.com/golang/go/issues/56152",,
+,,,,,,,,
+go binary,,,,,,,,
+Package,Package Path,Vuln ID,Severity,Version,Fixed Version,Links,Category,Justification
+github.com/apache/thrift,opt/truera/deps/temporal/temporal-serve,"CVE-2019-0205
+CVE-2019-0210",HIGH,v0.0.0-20161221203622-b2a4d4ae21c7,,"http://mail-archives.apache.org/mod_mbox/thrift-dev/201910.mbox/%3CVI1PR0101MB2142E0EA19F582429C3AEBCBB1920%40VI1PR0101MB2142.eurprd01.prod.exchangelabs.com%3E
+https://access.redhat.com/errata/RHSA-2020:0804
+https://access.redhat.com/errata/RHSA-2020:0805
+http://mail-archives.apache.org/mod_mbox/thrift-dev/201910.mbox/%3C277A46CA87494176B1BBCF5D72624A2A%40HAGGIS%3E
+https://access.redhat.com/errata/RHSA-2020:0804
+https://access.redhat.com/errata/RHSA-2020:0805",,
+golang.org/x/net,opt/truera/deps/temporal/temporal-serve,CVE-2022-27664,HIGH,v0.0.0-20220531201128-c960675eff93,0.0.0-20220906165146-f3363e06e74c,"https://access.redhat.com/errata/RHSA-2022:7129
+https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-27664.json
+https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-32189.json",,
+golang.org/x/text,opt/truera/deps/temporal/temporal-serve,CVE-2022-32149,HIGH,v0.3.7,0.3.8,"https://access.redhat.com/security/cve/CVE-2022-32149
+https://github.com/advisories/GHSA-69ch-w2m2-3vjp
+https://github.com/golang/go/issues/56152",,
+,,,,,,,,
+go binary,,,,,,,,
+Package,Package Path,Vuln ID,Severity,Version,Fixed Version,Links,Category,Justification
+golang.org/x/net,opt/truera/deps/temporal/temporal-sql-tool,CVE-2022-27664,HIGH,v0.0.0-20220531201128-c960675eff93,0.0.0-20220906165146-f3363e06e74c,"https://access.redhat.com/errata/RHSA-2022:7129
+https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-27664.json
+https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-32189.json",,
+golang.org/x/text,opt/truera/deps/temporal/temporal-sql-tool,CVE-2022-32149,HIGH,v0.3.7,0.3.8,"https://access.redhat.com/security/cve/CVE-2022-32149
+https://github.com/advisories/GHSA-69ch-w2m2-3vjp
+https://github.com/golang/go/issues/56152",,
+,,,,,,,,
+go binary,,,,,,,,
+Package,Package Path,Vuln ID,Severity,Version,Fixed Version,Links,Category,Justification
+github.com/go-yaml/yaml,opt/truera/deps/vault/vault,CVE-2021-4235,HIGH,v2.1.0+incompatible,,"https://access.redhat.com/security/cve/CVE-2021-4235
+https://github.com/advisories/GHSA-r88r-gmrh-7j83
+https://github.com/go-yaml/yaml/commit/bb4e33bf68bf89cad44d386192cbed201f35b241",,
+github.com/hashicorp/consul-template,opt/truera/deps/vault/vault,CVE-2022-38149,HIGH,v0.27.2-0.20211014231529-4ff55381f1c4,"0.27.3, 0.28.3, 0.29.2","https://access.redhat.com/security/cve/CVE-2022-38149
+https://discuss.hashicorp.com
+https://discuss.hashicorp.com/t/hsec-2022-16-consul-template-may-expose-vault-secrets-when-processing-invalid-input/43215",,
+github.com/prometheus/client_golang,opt/truera/deps/vault/vault,CVE-2022-21698,HIGH,v1.11.0,1.11.1,"https://access.redhat.com/errata/RHSA-2022:8057
+https://access.redhat.com/security/cve/CVE-2022-21698
+https://bugzilla.redhat.com/2044628",,
+golang.org/x/crypto,opt/truera/deps/vault/vault,CVE-2021-43565,HIGH,v0.0.0-20210817164053-32db794688a5,0.0.0-20211202192323-5770296d904e,"https://access.redhat.com/security/cve/CVE-2021-43565
+https://github.com/advisories/GHSA-gwc9-m7rh-j2ww
+https://go.dev/cl/368814/",,
+golang.org/x/crypto,opt/truera/deps/vault/vault,CVE-2022-27191,HIGH,v0.0.0-20210817164053-32db794688a5,0.0.0-20220314234659-1baeb1ce4c0b,"https://access.redhat.com/errata/RHSA-2022:8008
+https://access.redhat.com/security/cve/CVE-2022-27191
+https://bugzilla.redhat.com/1939485",,
+golang.org/x/net,opt/truera/deps/vault/vault,CVE-2021-44716,HIGH,v0.0.0-20211020060615-d418f374d309,0.0.0-20211209124913-491a49abca63,"https://access.redhat.com/security/cve/CVE-2021-44716
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44716
+https://github.com/golang/go/commit/48d948963c5ce7add72af5665a871caff6c1d35a (go1.17.5)",,
+golang.org/x/net,opt/truera/deps/vault/vault,CVE-2022-27664,HIGH,v0.0.0-20211020060615-d418f374d309,0.0.0-20220906165146-f3363e06e74c,"https://access.redhat.com/errata/RHSA-2022:7129
+https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-27664.json
+https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-32189.json",,
+golang.org/x/text,opt/truera/deps/vault/vault,CVE-2022-32149,HIGH,v0.3.7,0.3.8,"https://access.redhat.com/security/cve/CVE-2022-32149
+https://github.com/advisories/GHSA-69ch-w2m2-3vjp
+https://github.com/golang/go/issues/56152",,
